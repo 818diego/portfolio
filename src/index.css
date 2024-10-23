@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    filter: invert(0);
+}
+
+.light-mode .logo {
+    filter: invert(1);
+}
