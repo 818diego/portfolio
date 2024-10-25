@@ -20,8 +20,8 @@ const Navbar: React.FC = () => {
                         <img
                             src={
                                 darkMode
-                                    ? "src/public/supreSVG.svg"
-                                    : "src/public/supreSVG-light.svg"
+                                    ? "src/assets/supreSVG.svg"
+                                    : "src/assets/supreSVG-light.svg"
                             }
                             alt="Logo"
                             width={40}
