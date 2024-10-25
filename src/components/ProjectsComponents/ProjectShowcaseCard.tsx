@@ -1,8 +1,9 @@
 import React, { memo, useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { SiReact, SiTailwindcss, SiVercel, SiTypescript } from "react-icons/si";
+import { SiReact, SiTailwindcss, SiVercel, SiTypescript, SiCss3, SiJavascript, SiPhp, SiBootstrap } from "react-icons/si";
 import Modal from "../Modal";
+import { DiJqueryLogo } from "react-icons/di";
 
 interface ProjectShowcaseCardProps {
     id: number;
@@ -20,6 +21,13 @@ const tagIcons: { [key: string]: React.ElementType } = {
     "Tailwind CSS": SiTailwindcss,
     NextJS: SiVercel,
     TypeScript: SiTypescript,
+    "React Native": SiReact,
+    CSS: SiCss3,
+    JavaScript: SiJavascript,
+    PHP: SiPhp,
+    Laravel: SiPhp,
+    Bootstrap: SiBootstrap,
+    jQuery: DiJqueryLogo,
 };
 
 const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = memo(

@@ -3,6 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
+const logoDark = new URL('/public/supreSVG.svg', import.meta.url).href;
+const logoLight = new URL('/public/supreSVG-light.svg', import.meta.url).href;
+
 const Navbar: React.FC = () => {
     const { darkMode, toggleDarkMode } = useTheme();
     const [isMenuOpen, setMenuOpen] = React.useState(false);
@@ -18,11 +21,7 @@ const Navbar: React.FC = () => {
                         to="/"
                         className="text-xl font-bold text-gray-800 dark:text-white">
                         <img
-                            src={
-                                darkMode
-                                    ? "public/supreSVG.svg"
-                                    : "public/supreSVG-light.svg"
-                            }
+                            src={darkMode ? logoDark : logoLight}
                             alt="Logo"
                             width={40}
                             height={40}
