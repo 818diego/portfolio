@@ -6,6 +6,6 @@ export const projectsData = [
             "Worked on the design using NextJS and TailwindCSS, following Agile Scrum methodology and managed RESTful APIs..",
         tags: ["NextJS", "Tailwind CSS", "TypeScript"],
         livePreviewUrl: "https://management-sales.vercel.app/",
-        previewImage: "src/public/images/project.webp",
+        previewImage: "/public/images/project.webp",
     },
 ];
