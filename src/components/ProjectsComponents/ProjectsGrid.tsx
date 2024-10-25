@@ -14,7 +14,7 @@ const ProjectsGrid: React.FC = () => {
                     livePreviewUrl={project.livePreviewUrl}
                     githubUrl={project.githubUrl}
                     previewImage={project.previewImage}
-                    delay={index * 0.2}
+                    id={project.id}
                 />
             ))}
         </div>
