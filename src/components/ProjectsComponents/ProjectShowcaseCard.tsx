@@ -1,7 +1,19 @@
 import React, { memo, useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { SiReact, SiTailwindcss, SiVercel, SiTypescript, SiCss3, SiJavascript, SiPhp, SiBootstrap } from "react-icons/si";
+import {
+    SiReact,
+    SiTailwindcss,
+    SiVercel,
+    SiTypescript,
+    SiCss3,
+    SiJavascript,
+    SiPhp,
+    SiBootstrap,
+    SiAstro,
+    SiHtml5,
+    SiPython,
+} from "react-icons/si";
 import Modal from "../Modal";
 import { DiJqueryLogo } from "react-icons/di";
 
@@ -28,6 +40,9 @@ const tagIcons: { [key: string]: React.ElementType } = {
     Laravel: SiPhp,
     Bootstrap: SiBootstrap,
     jQuery: DiJqueryLogo,
+    Astro: SiAstro,
+    HTML: SiHtml5,
+    Python: SiPython,
 };
 
 const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = memo(
@@ -94,17 +109,17 @@ const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = memo(
                         })}
                     </div>
 
-                    <div className="flex space-x-4 justify-center">
+                    <div className="flex space-x-2 mt-8 justify-center">
                         {livePreviewUrl && (
                             <a
                                 href={livePreviewUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 active:bg-green-700 transition transform duration-150"
-                                aria-label="Live Preview"
+                                className="flex items-center px-3 py-1.5 bg-blue-500 text-white text-sm font-medium rounded-md shadow-md hover:bg-blue-600 active:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-400"
+                                aria-label="Abrir vista previa en vivo"
                                 onClick={(e) => e.stopPropagation()}>
-                                <FaExternalLinkAlt className="mr-2" />
-                                Live Preview
+                                <FaExternalLinkAlt className="mr-1" />
+                                Preview
                             </a>
                         )}
                         {githubUrl && (
@@ -112,11 +127,11 @@ const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = memo(
                                 href={githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 active:bg-gray-900 transition transform duration-150"
-                                aria-label="GitHub Repository"
+                                className="flex items-center px-3 py-1.5 bg-gray-700 text-white text-sm font-medium rounded-md shadow-md hover:bg-gray-600 active:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-500"
+                                aria-label="Abrir repositorio en GitHub"
                                 onClick={(e) => e.stopPropagation()}>
-                                <FaGithub className="mr-2" />
-                                GitHub
+                                <FaGithub className="mr-1" />
+                                GitHub Repository
                             </a>
                         )}
                     </div>

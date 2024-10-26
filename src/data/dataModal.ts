@@ -43,4 +43,26 @@ export const modalData: ModalContent[] = [
             hosting: "Hosting unvailable.",
         },
     },
+    {
+        id: 4,
+        title: "Supremo Team Website",
+        content: {
+            description:
+                "This is a personal project where I created a Discord bot dedicated to the Discord community, which plays music and is a multifunctional security bot for servers.",
+            technologies: ["Astro", "DiscordAPI", "MongoDB", "NodeJS"],
+            methodologies: ["No methodologies used 😥"],
+            hosting: "Hosting unavailable.",
+        },
+    },
+    {
+        id: 5,
+        title: "Dog Breed Prediction Web Application",
+        content: {
+            description:
+                "This is a final university project, in which we developed a convolutional neural network to predict dog breeds, and a web application was created to interact with the neural network and predict more than 100 dog breeds.",
+            technologies: ["Python", "Tensorflow", "Keras"],
+            methodologies: ["No methodologies used 😥"],
+            hosting: "Hosting unavailable.",
+        },
+    },
 ];

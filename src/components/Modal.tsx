@@ -44,19 +44,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, id }) => {
                 onClick={(e) => e.stopPropagation()}>
                 <button
                     onClick={onClose}
-                    className="absolute top-2 right-2 text-gray-700 dark:text-gray-300 text-xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    className="absolute top-6 right-4 text-gray-700 dark:text-gray-300 text-xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                     <FaTimes />
                 </button>
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-4 pr-10">
                     <h2 className="text-2xl font-bold flex items-center">
-                        <FaCheckCircle className="mr-2 text-green-500 text-lg" />
-                        {modalContent.title}
+                        <span>{modalContent.title}</span>
                     </h2>
                 </div>
                 <p className="mb-4">{modalContent.content.description}</p>
                 <h3 className="text-lg font-semibold mb-2 flex items-center">
                     <FaTools className="mr-2 text-blue-500 text-lg" />
-                    Tecnologías utilizadas:
+                    <span>Tecnologías utilizadas:</span>
                 </h3>
                 <ul className="list-disc list-inside mb-4 pl-5">
                     {modalContent.content.technologies.map(
@@ -83,7 +82,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, id }) => {
                 </ul>
                 <h3 className="text-lg font-semibold mb-2 flex items-center">
                     <FaTools className="mr-2 text-blue-500 text-lg" />
-                    Metodologías:
+                    <span>Metodologías:</span>
                 </h3>
                 <ul className="list-disc list-inside mb-4 pl-5">
                     {modalContent.content.methodologies.map(

@@ -1,10 +1,20 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X } from "lucide-react";
+import {
+    Home,
+    User,
+    Briefcase,
+    Mail,
+    Sun,
+    Moon,
+    Menu,
+    X,
+    Folder,
+} from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
-const logoDark = new URL('/public/supreSVG.svg', import.meta.url).href;
-const logoLight = new URL('/public/supreSVG-light.svg', import.meta.url).href;
+const logoDark = new URL("/public/supreSVG.svg", import.meta.url).href;
+const logoLight = new URL("/public/supreSVG-light.svg", import.meta.url).href;
 
 const Navbar: React.FC = () => {
     const { darkMode, toggleDarkMode } = useTheme();
@@ -45,8 +55,14 @@ const Navbar: React.FC = () => {
                         />
                         <NavLink
                             to="/projects"
-                            icon={<Briefcase size={20} />}
+                            icon={<Folder size={20} />}
                             text="Projects"
+                            isActive={isActive}
+                        />
+                        <NavLink
+                            to="/experience"
+                            icon={<Briefcase size={20} />}
+                            text="Experience"
                             isActive={isActive}
                         />
                         <NavLink

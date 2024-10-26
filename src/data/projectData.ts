@@ -15,7 +15,6 @@ export const projectsData = [
         description:
             "Worked on UI/UX, connecting backend with frontend using RESTful APIs.",
         tags: ["React Native", "CSS", "JavaScript"],
-        // livePreviewUrl: "https://e-commerce-website.vercel.app/",
         previewImage: new URL("/public/images/appmobile.webp", import.meta.url)
             .href,
     },
@@ -27,6 +26,27 @@ export const projectsData = [
         tags: ["Laravel", "PHP", "Bootstrap", "jQuery"],
         // livePreviewUrl: "https://management-sales.vercel.app/",
         previewImage: new URL("/public/images/notfount.webp", import.meta.url)
+            .href,
+    },
+    {
+        id: 4,
+        title: "Supremo Team Website",
+        description:
+            "I worked on the design and development of the page, using Astro for development with JavaScript and TailwindCSS.",
+        tags: ["Astro", "Tailwind CSS", "JavaScript"],
+        livePreviewUrl: "https://supremito.xyz/",
+        previewImage: new URL(
+            "/public/images/supremopage.webp",
+            import.meta.url
+        ),
+    },
+    {
+        id: 5,
+        title: "Dog Breed Prediction Web Application",
+        description:
+            "I worked on the design and development of the page, using vanilla technologies like HTML, CSS, and JavaScript.",
+        tags: ["HTML", "CSS", "JavaScript", "Python"],
+        previewImage: new URL("/public/images/computo.webp", import.meta.url)
             .href,
     },
 ];
