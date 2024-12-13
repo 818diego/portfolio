@@ -1,0 +1,63 @@
+{
+  "header": {
+    "portfolio": "",
+    "language": "",
+    "theme": ""
+  },
+  "hero": {
+    "available": "",
+    "greeting": "",
+    "role": "",
+    "description": ""
+  },
+  "experience": {
+    "title": "",
+    "present": "",
+    "positions": [
+      {
+        "title": "",
+        "company": "",
+        "description": "",
+        "achievements": [
+          "",
+          "",
+          ""
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "xdxdxd",
+    "code": "",
+    "demo": "",
+    "features": "",
+    "items": [
+      {
+        "title": "",
+        "description": "",
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "",
+    "languages": "",
+    "frontend": "",
+    "backend": "",
+    "tools": "",
+    "level": ""
+  },
+  "footer": {
+    "rights": "",
+    "contact": "",
+    "social": {
+      "github": "",
+      "linkedin": "",
+      "email": ""
+    }
+  }
+}

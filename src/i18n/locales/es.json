@@ -1,0 +1,117 @@
+{
+  "header": {
+    "portfolio": "Portafolio",
+    "language": "Idioma",
+    "theme": "Tema"
+  },
+  "hero": {
+    "available": "Disponible para proyectos",
+    "greeting": "Hola, soy",
+    "role": "Desarrollador Full Stack y Entusiasta UI/UX",
+    "description": "Apasionado por crear experiencias digitales excepcionales. Especializado en desarrollo web moderno, arquitecturas escalables y diseño centrado en el usuario. Con más de 5 años de experiencia transformando ideas en soluciones tecnológicas innovadoras."
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "present": "Presente",
+    "positions": [
+      {
+        "title": "Desarrollador Full Stack Senior",
+        "company": "Tech Innovators Inc",
+        "description": "Liderando el desarrollo de aplicaciones empresariales",
+        "achievements": [
+          "Aumentó la productividad del equipo en un 40%",
+          "Redujo el tiempo de implementación en un 60%",
+          "Mentoreó a 5 desarrolladores junior"
+        ]
+      },
+      {
+        "title": "Líder Técnico Frontend",
+        "company": "Digital Solutions Co",
+        "description": "Lideró la arquitectura y desarrollo frontend",
+        "achievements": [
+          "Implementó arquitectura micro-frontend",
+          "Redujo el tamaño del bundle en un 45%",
+          "Mejoró la puntuación Lighthouse a 95+"
+        ]
+      },
+      {
+        "title": "Desarrollador Backend",
+        "company": "Cloud Systems Ltd",
+        "description": "Desarrolló microservicios escalables",
+        "achievements": [
+          "Construyó APIs de alto rendimiento",
+          "Implementó arquitectura basada en eventos",
+          "Logró 99.9% de tiempo de actividad"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "code": "Código",
+    "demo": "Demo",
+    "features": "Características",
+    "methodology": "Metodología",
+    "teamSize": "Tamaño del Equipo",
+    "duration": "Duración",
+    "impact": "Impacto",
+    "items": [
+      {
+        "title": "Plataforma E-commerce Moderna",
+        "description": "Solución e-commerce full-stack con gestión de inventario en tiempo real y análisis avanzado",
+        "features": [
+          "Actualizaciones en tiempo real",
+          "Integración de pagos",
+          "Panel de administración"
+        ],
+        "methodology": "Scrum",
+        "teamSize": "6 desarrolladores",
+        "duration": "8 meses",
+        "impact": "Incremento en ventas del 45%"
+      },
+      {
+        "title": "Dashboard de Análisis con IA",
+        "description": "Plataforma de visualización de datos con insights de machine learning y modelado predictivo",
+        "features": [
+          "Análisis predictivo",
+          "Informes personalizados",
+          "Integración API"
+        ],
+        "methodology": "Kanban",
+        "teamSize": "4 desarrolladores",
+        "duration": "6 meses",
+        "impact": "Reducción del tiempo de análisis en 60%"
+      },
+      {
+        "title": "CMS Nativo en la Nube",
+        "description": "Sistema de gestión de contenido escalable construido para la nube con características empresariales",
+        "features": [
+          "Integración CDN",
+          "Arquitectura serverless",
+          "Soporte multi-tenant"
+        ],
+        "methodology": "Scrumban",
+        "teamSize": "5 desarrolladores",
+        "duration": "12 meses",
+        "impact": "99.99% de disponibilidad lograda"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades y Experiencia",
+    "languages": "Lenguajes de Programación",
+    "frontend": "Desarrollo Frontend",
+    "backend": "Desarrollo Backend",
+    "tools": "Herramientas y Tecnologías",
+    "level": "Nivel de dominio"
+  },
+  "footer": {
+    "rights": "© 2024 Portafolio. Todos los derechos reservados.",
+    "contact": "Contacto",
+    "social": {
+      "github": "Perfil de GitHub",
+      "linkedin": "Perfil de LinkedIn",
+      "email": "Enviar Email"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "header": {
+    "portfolio": "Portfolio",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "hero": {
+    "available": "Available for projects",
+    "greeting": "Hello, I'm",
+    "role": "Full Stack Developer & UI/UX Enthusiast",
+    "description": "Passionate about creating exceptional digital experiences. Specialized in modern web development, scalable architectures, and user-centered design. With over 5 years of experience transforming ideas into innovative technological solutions."
+  },
+  "experience": {
+    "title": "Work Experience",
+    "present": "Present",
+    "positions": [
+      {
+        "title": "Senior Full Stack Developer",
+        "company": "Tech Innovators Inc",
+        "description": "Leading development of enterprise-scale applications",
+        "achievements": [
+          "Increased team productivity by 40%",
+          "Reduced deployment time by 60%",
+          "Mentored 5 junior developers"
+        ]
+      },
+      {
+        "title": "Frontend Tech Lead",
+        "company": "Digital Solutions Co",
+        "description": "Led frontend architecture and development",
+        "achievements": [
+          "Implemented micro-frontend architecture",
+          "Reduced bundle size by 45%",
+          "Improved Lighthouse score to 95+"
+        ]
+      },
+      {
+        "title": "Backend Developer",
+        "company": "Cloud Systems Ltd",
+        "description": "Developed scalable microservices",
+        "achievements": [
+          "Built high-performance APIs",
+          "Implemented event-driven architecture",
+          "99.9% uptime achievement"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "code": "Code",
+    "demo": "Demo",
+    "features": "Features",
+    "methodology": "Methodology",
+    "teamSize": "Team Size",
+    "duration": "Duration",
+    "impact": "Impact",
+    "items": [
+      {
+        "title": "Modern E-commerce Platform",
+        "description": "A full-stack e-commerce solution with real-time inventory management and advanced analytics",
+        "features": [
+          "Real-time updates",
+          "Payment integration",
+          "Admin dashboard"
+        ],
+        "methodology": "Scrum",
+        "teamSize": "6 developers",
+        "duration": "8 months",
+        "impact": "Increased sales by 45%"
+      },
+      {
+        "title": "AI-Powered Analytics Dashboard",
+        "description": "Data visualization platform with machine learning insights and predictive modeling capabilities",
+        "features": [
+          "Predictive analytics",
+          "Custom reports",
+          "API integration"
+        ],
+        "methodology": "Kanban",
+        "teamSize": "4 developers",
+        "duration": "6 months",
+        "impact": "Reduced analysis time by 60%"
+      },
+      {
+        "title": "Cloud-Native CMS",
+        "description": "Scalable content management system built for the cloud with enterprise-grade features",
+        "features": [
+          "CDN integration",
+          "Serverless architecture",
+          "Multi-tenant support"
+        ],
+        "methodology": "Scrumban",
+        "teamSize": "5 developers",
+        "duration": "12 months",
+        "impact": "99.99% uptime achieved"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "languages": "Programming Languages",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "tools": "Tools & Technologies",
+    "level": "Proficiency"
+  },
+  "footer": {
+    "rights": "© 2024 Portfolio. All rights reserved.",
+    "contact": "Get in touch",
+    "social": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile",
+      "email": "Send Email"
+    }
+  }
+}
