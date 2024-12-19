@@ -1,12 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { experiences } from '../../data';
-import { Badge } from '../ui/Badge';
+import React, { useEffect } from 'react';
+import { experiences } from '@/data';
 import { Calendar, Briefcase, CheckCircle2 } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 
 export const Experience: React.FC = () => {
-  const { t } = useTranslation();
-  const timelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,12 +27,12 @@ export const Experience: React.FC = () => {
   return (
     <section className="py-20 bg-gray-200 dark:bg-zinc-900 relative">
       <div className="absolute left-0 top-0 w-1 h-full bg-green-500/20 dark:bg-green-400/20" />
-      
+
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
-          {t('experience.title')}
+          Experience
         </h2>
-        
+
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <div
@@ -52,37 +48,30 @@ export const Experience: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-gray-800 dark:text-green-300">
-                      {t(`experience.positions.${index}.title`)}
+                      {exp.title}
                     </h3>
                     <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                       <Briefcase className="w-4 h-4" />
-                      <span>{t(`experience.positions.${index}.company`)}</span>
+                      <span>{exp.company}</span>
                       <span>•</span>
                       <Calendar className="w-4 h-4" />
                       <span>{exp.period}</span>
                     </div>
                   </div>
-                  <div className="flex flex-wrap gap-2 mt-2 md:mt-0">
-                    {exp.tech.map((tech, i) => (
-                      <Badge key={i} variant="outline">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
                 </div>
-                
+
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {t(`experience.positions.${index}.description`)}
+                  {exp.description}
                 </p>
-                
+
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, i) => (
-                    <li 
+                    <li
                       key={i}
                       className="flex items-center text-gray-600 dark:text-gray-400"
                     >
                       <CheckCircle2 className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0" />
-                      {t(`experience.positions.${index}.achievements.${i}`)}
+                      {achievement}
                     </li>
                   ))}
                 </ul>

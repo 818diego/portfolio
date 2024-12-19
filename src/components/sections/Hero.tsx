@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { Github, Linkedin, Mail, Terminal, Code2, Sparkles } from 'lucide-react';
-import { personalInfo } from '../../data';
-import { useTranslation } from 'react-i18next';
+import { personalInfo } from '@/data';
 
 export const Hero: React.FC = () => {
-  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   
   useEffect(() => {
@@ -37,27 +35,27 @@ export const Hero: React.FC = () => {
         <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-full mb-6 scroll-fade-in">
           <Terminal className="w-4 h-4 text-green-600 dark:text-green-400" />
           <span className="text-green-600 dark:text-green-400 font-medium">
-            {t('hero.available')}
+            {personalInfo.available}
           </span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-800 dark:text-green-400 scroll-fade-in">
-          {t('hero.greeting')} <span className="text-green-600 dark:text-green-300">{personalInfo.fullName}</span>
+          Hello, I'm <span className="text-green-600 dark:text-green-300">{personalInfo.fullName}</span>
         </h1>
         
         <div className="flex items-center justify-center gap-3 mb-8 scroll-fade-in">
           <Code2 className="w-6 h-6 text-green-600 dark:text-green-400" />
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            {t('hero.role')}
+            {personalInfo.role}
           </p>
           <Sparkles className="w-6 h-6 text-green-600 dark:text-green-400" />
         </div>
 
         <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 mb-8 scroll-fade-in">
-          {t('hero.description')}
+          {personalInfo.description}
         </p>
 
-        <div className="flex justify-center gap-4 mb-16">
+        <div className="flex justify-center gap-4">
           {[
             { 
               icon: Github, 

@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { skills } from '../../data';
 import { ProgressBar } from '../ui/ProgressBar';
-import { useTranslation } from 'react-i18next';
 
 export const Skills: React.FC = () => {
-  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,17 +26,17 @@ export const Skills: React.FC = () => {
   }, []);
 
   const categories = [
-    { title: t('skills.languages'), data: skills.languages },
-    { title: t('skills.frontend'), data: skills.frontend },
-    { title: t('skills.backend'), data: skills.backend },
-    { title: t('skills.tools'), data: skills.tools }
+    { title: 'Languages', data: skills.languages },
+    { title: 'Frontend', data: skills.frontend },
+    { title: 'Backend', data: skills.backend },
+    { title: 'Tools', data: skills.tools }
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-200 dark:bg-zinc-900">
+    <section ref={sectionRef} className="py-20 bg-gray-100 dark:bg-zinc-900">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
-          {t('skills.title')}
+          Skills
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -46,7 +44,7 @@ export const Skills: React.FC = () => {
             <div
               key={index}
               className="bg-white dark:bg-zinc-800 rounded-lg p-6 shadow-lg scroll-fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              style={{ animationDelay: `${index * 0.3}s` }}
             >
               <h3 className="text-xl font-bold mb-6 text-gray-800 dark:text-green-300">
                 {category.title}
@@ -56,7 +54,7 @@ export const Skills: React.FC = () => {
                   <div
                     key={skillIndex}
                     className="scroll-fade-in"
-                    style={{ animationDelay: `${(index * 4 + skillIndex) * 0.1}s` }}
+                    style={{ animationDelay: `${(index * 4 + skillIndex) * 0.2}s` }}
                   >
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sun, Moon, Languages } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Sun, Moon } from 'lucide-react';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -8,14 +7,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
-  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const currentLanguage = i18n.language || 'es';
-
-  const toggleLanguage = () => {
-    const newLang = currentLanguage === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,36 +19,27 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'header-scroll' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'header-scroll' : 'bg-transparent'
+      }`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-green-400 transition-all duration-300">
-          {t('header.portfolio')}
+          <img
+            src="supreSVG.svg"
+            alt="Logo"
+            className={`w-10 h-10 mr-2 ${darkMode ? 'dark-mode-img' : 'light-mode-img'}`}
+          />
         </h1>
-        <div className="flex items-center gap-4">
-          <button
-            onClick={toggleLanguage}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 lang-switch flex items-center gap-2"
-            aria-label="Toggle language"
-          >
-            <Languages className="text-gray-800 dark:text-green-400 w-5 h-5" />
-            <span className="text-sm text-gray-800 dark:text-green-400">
-              {currentLanguage.toUpperCase()}
-            </span>
-          </button>
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 theme-switch"
-            aria-label="Toggle theme"
-          >
-            {darkMode ? (
-              <Sun className="text-green-400 w-5 h-5" />
-            ) : (
-              <Moon className="text-gray-800 w-5 h-5" />
-            )}
-          </button>
-        </div>
+        <button
+          onClick={toggleDarkMode}
+          className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 theme-switch"
+          aria-label="Toggle theme"
+        >
+          {darkMode ? (
+            <Sun className="text-green-400 w-5 h-5" />
+          ) : (
+            <Moon className="text-gray-800 w-5 h-5" />
+          )}
+        </button>
       </div>
     </nav>
   );

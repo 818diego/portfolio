@@ -7,7 +7,7 @@
   "hero": {
     "available": "Disponible para proyectos",
     "greeting": "Hola, soy",
-    "role": "Desarrollador Full Stack y Entusiasta UI/UX",
+    "role": "Ingeniero de Software y Entusiasta UI/UX",
     "description": "Apasionado por crear experiencias digitales excepcionales. Especializado en desarrollo web moderno, arquitecturas escalables y diseño centrado en el usuario. Con más de 5 años de experiencia transformando ideas en soluciones tecnológicas innovadoras."
   },
   "experience": {
@@ -15,33 +15,40 @@
     "present": "Presente",
     "positions": [
       {
-        "title": "Desarrollador Full Stack Senior",
-        "company": "Tech Innovators Inc",
-        "description": "Liderando el desarrollo de aplicaciones empresariales",
+        "title": "Desarrollador Full Stack",
+        "company": "Freelance",
+        "description": "Desarrollo de soluciones web y móviles para clientes de diversas industrias, desde la conceptualización hasta la entrega.",
+        "responsibilities": [
+          "Diseñar y desarrollar interfaces de usuario utilizando React y Next.js para garantizar experiencias intuitivas y modernas.",
+          "Implementar y mantener APIs RESTful y servicios backend con Express, Node.js y C# .NET.",
+          "Gestionar todo el ciclo de vida de los proyectos, incluyendo análisis de requerimientos, desarrollo, pruebas y despliegue.",
+          "Proveer soporte técnico y mantenimiento post-implementación para asegurar la continuidad operativa de los clientes."
+        ],
         "achievements": [
-          "Aumentó la productividad del equipo en un 40%",
-          "Redujo el tiempo de implementación en un 60%",
-          "Mentoreó a 5 desarrolladores junior"
+          "Colaboro con clientes en proyectos de diferentes tamaños, adaptándome a sus necesidades específicas.",
+          "Logré optimizar el rendimiento de las aplicaciones entregadas, mejorando los tiempos de carga.",
+          "Establecí relaciones de confianza con clientes al cumplir con plazos y mantener altos estándares de calidad.",
+          "Me mantuve actualizado en las mejores prácticas y nuevas tecnologías para ofrecer soluciones modernas y escalables."
         ]
-      },
+      },      
       {
-        "title": "Líder Técnico Frontend",
-        "company": "Digital Solutions Co",
-        "description": "Lideró la arquitectura y desarrollo frontend",
+        "title": "Practicante",
+        "company": "PT DILATO INFORMATION TECHNOLOGY",
+        "description": "Participé en la migración de un sistema de ventas a tecnologías modernas, trabajando en el desarrollo frontend.",
         "achievements": [
-          "Implementó arquitectura micro-frontend",
-          "Redujo el tamaño del bundle en un 45%",
-          "Mejoró la puntuación Lighthouse a 95+"
+          "Desarrollé componentes frontend utilizando Next.js, mejorando la experiencia de usuario.",
+          "Colaboré con el equipo de QA para garantizar la calidad del sistema y resolver errores de manera eficiente.",
+          "Contribuí al rediseño del sistema para hacerlo más escalable y eficiente."
         ]
-      },
+      },      
       {
-        "title": "Desarrollador Backend",
-        "company": "Cloud Systems Ltd",
-        "description": "Desarrolló microservicios escalables",
+        "title": "Desarrollador Full Stack",
+        "company": "Hotel La Costa",
+        "description": "Colaboré en el desarrollo y mantenimiento de un sistema de gestión hotelera utilizando PHP y Laravel.",
         "achievements": [
-          "Construyó APIs de alto rendimiento",
-          "Implementó arquitectura basada en eventos",
-          "Logró 99.9% de tiempo de actividad"
+          "Desarrollé y optimicé APIs para integrar funcionalidades clave en un entorno monolítico.",
+          "Mejoré la estabilidad y el rendimiento del sistema, asegurando su correcta operación en el entorno productivo.",
+          "Trabajé en equipo para implementar nuevas características y resolver problemas técnicos."
         ]
       }
     ]
