@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
   return (
     <section 
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center pt-16 scroll-section-appear"
+      className="min-h-screen flex items-center justify-center scroll-section-appear"
     >
       <div className="container mx-auto px-6 py-24 text-center">
         <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-full mb-6 scroll-fade-in">
