@@ -3,7 +3,7 @@ import React from 'react';
 interface BadgeProps {
   children: React.ReactNode;
   variant?: 'default' | 'outline';
-  icon?: React.ReactNode; // Added icon prop
+  icon?: React.ReactNode;
 }
 
 export const Badge: React.FC<BadgeProps> = ({ children, variant = 'default', icon }) => {
@@ -15,7 +15,7 @@ export const Badge: React.FC<BadgeProps> = ({ children, variant = 'default', ico
 
   return (
     <span className={`${baseStyles} ${variants[variant]}`}>
-      {icon && <span className="w-4 h-4">{icon}</span>} {/* Render icon if provided */}
+      {icon && <span className="w-4 h-4">{icon}</span>}
       {children}
     </span>
   );
