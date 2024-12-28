@@ -6,7 +6,6 @@ import { Projects } from './components/sections/Projects';
 import { Skills } from './components/sections/Skills';
 import { Footer } from './components/Footer';
 import { ScrollProgress } from './components/ScrollProgress';
-import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,7 +20,6 @@ function App() {
       <Experience />
       <Projects />
       <Skills />
-      <Analytics />
       <Footer />
     </div>
   );
