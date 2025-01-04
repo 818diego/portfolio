@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { experiences } from '@/data';
-import { Calendar, Briefcase, CheckCircle2 } from 'lucide-react';
+import { Calendar, Briefcase, CheckCircle2, Award } from 'lucide-react';
 
 export const Experience: React.FC = () => {
 
@@ -29,7 +29,8 @@ export const Experience: React.FC = () => {
       <div className="absolute left-0 top-0 w-1 h-full bg-green-500/20 dark:bg-green-400/20" />
 
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in flex items-center justify-center gap-2">
+          <Award className="w-8 h-8 text-green-500 dark:text-green-400 mt-1" />
           Experience
         </h2>
 

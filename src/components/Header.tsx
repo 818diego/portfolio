@@ -35,9 +35,9 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           aria-label="Toggle theme"
         >
           {darkMode ? (
-            <Sun className="text-green-400 w-5 h-5" />
+            <Sun className="text-green-400 w-6 h-6" />
           ) : (
-            <Moon className="text-gray-800 w-5 h-5" />
+            <Moon className="text-gray-800 w-6 h-6" />
           )}
         </button>
       </div>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCode, FaExternalLinkAlt, FaProjectDiagram } from 'react-icons/fa';
 import { projects } from '@/data';
 import { Badge } from '@/components/ui/Badge';
 
@@ -43,7 +43,8 @@ export const Projects: React.FC = () => {
   return (
     <section className="py-20 bg-gray-100 dark:bg-zinc-900/50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in flex items-center justify-center gap-2">
+          <FaProjectDiagram className="w-8 h-8 text-green-400" />
           Projects
         </h2>
 

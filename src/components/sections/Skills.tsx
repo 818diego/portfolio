@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { skills } from '../../data';
 import { ProgressBar } from '../ui/ProgressBar';
+import { FaTools } from 'react-icons/fa';
 
 export const Skills: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -35,7 +36,8 @@ export const Skills: React.FC = () => {
   return (
     <section ref={sectionRef} className="py-20 bg-gray-100 dark:bg-zinc-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
+        <h2 className="text-3xl font-bold mb-10 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
+          <FaTools className="inline-block w-7 h-7 mr-2 text-green-500 dark:text-green-400 mb-1" />
           Skills
         </h2>
 

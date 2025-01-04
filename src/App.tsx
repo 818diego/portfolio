@@ -6,6 +6,7 @@ import { Projects } from './components/sections/Projects';
 import { Skills } from './components/sections/Skills';
 import { Footer } from './components/Footer';
 import { ScrollProgress } from './components/ScrollProgress';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <Projects />
       <Skills />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
