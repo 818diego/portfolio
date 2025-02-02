@@ -21,6 +21,18 @@ export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (savedDarkMode !== darkMode) {
+      toggleDarkMode();
+    }
+  }, []);
+
+  const handleToggleDarkMode = () => {
+    toggleDarkMode();
+    localStorage.setItem('darkMode', (!darkMode).toString());
+  };
+
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
@@ -38,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode 
         </h1>
         <div className="flex items-center space-x-4">
           <button
-            onClick={toggleDarkMode}
+            onClick={handleToggleDarkMode}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 flex items-center"
             aria-label="Toggle theme"
           >
