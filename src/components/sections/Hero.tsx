@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Github, Linkedin, Mail, Code2 } from 'lucide-react';
+import { Github, Linkedin, Mail, Code2, FileText } from 'lucide-react';
 import { BsTerminalFill } from 'react-icons/bs';
 import { GrCloudSoftware } from 'react-icons/gr';
 import { personalInfo } from '@/data';
@@ -76,6 +76,12 @@ export const Hero: React.FC = () => {
               href: personalInfo.social.email,
               label: "Email",
               color: "hover:text-red-500 dark:hover:text-red-400"
+            },
+            {
+              icon: FileText,
+              href: personalInfo.social.cv,
+              label: "CV",
+              color: "hover:text-blue-500 dark:hover:text-blue-400"
             }
           ].map((social, index) => (
             <a
@@ -86,7 +92,7 @@ export const Hero: React.FC = () => {
               className={`group relative p-3 rounded-full bg-white dark:bg-zinc-800 shadow-md hover:shadow-lg transition-all button-hover ${social.color} scroll-fade-in`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <social.icon className="w-6 h-6 text-gray-600 dark:text-gray-400 transition-colors" />
+              <social.icon className="w-6 h-6 text-gray-600 dark:text-gray-400 transition-colors group-hover:text-green-600 dark:group-hover:text-green-400" />
               <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-gray-600 dark:text-gray-400">
                 {social.label}
               </span>

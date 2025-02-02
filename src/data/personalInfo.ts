@@ -7,6 +7,7 @@ export const personalInfo = {
   social: {
     github: "https://github.com/818diego",
     linkedin: "https://www.linkedin.com/in/818diego/",
-    email: "mailto:diego.merino@uabc.edu.mx"
+    email: "mailto:diego.fmerinoh@gmail.com",
+    cv: "DiegoCV.pdf"
   }
 };
