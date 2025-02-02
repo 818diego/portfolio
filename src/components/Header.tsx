@@ -6,7 +6,7 @@ interface HeaderProps {
   toggleDarkMode: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
+export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -31,13 +31,19 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         </h1>
         <button
           onClick={toggleDarkMode}
-          className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 theme-switch"
+          className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 flex items-center"
           aria-label="Toggle theme"
         >
           {darkMode ? (
-            <Sun className="text-green-400 w-6 h-6" />
+            <>
+              <Sun className="text-green-400 w-6 h-6 transition-transform duration-300" />
+              <span className="ml-2 text-green-400">Dark Mode</span>
+            </>
           ) : (
-            <Moon className="text-gray-800 w-6 h-6" />
+            <>
+              <Moon className="text-gray-800 w-6 h-6 transition-transform duration-300" />
+              <span className="ml-2 text-gray-800">Light Mode</span>
+            </>
           )}
         </button>
       </div>
