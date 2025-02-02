@@ -3,8 +3,10 @@ import { Github, Linkedin, Mail, Code2, FileText } from 'lucide-react';
 import { BsTerminalFill } from 'react-icons/bs';
 import { GrCloudSoftware } from 'react-icons/gr';
 import { personalInfo } from '@/data';
+import { useTranslation } from 'react-i18next';
 
 export const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -28,6 +30,8 @@ export const Hero: React.FC = () => {
     };
   }, []);
 
+  const info = personalInfo();
+
   return (
     <section
       ref={sectionRef}
@@ -37,49 +41,49 @@ export const Hero: React.FC = () => {
         <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-full mb-6 scroll-fade-in">
           <BsTerminalFill className="w-4 h-4 text-green-600 dark:text-green-400" />
           <span className="text-green-600 dark:text-green-400 font-medium">
-            {personalInfo.available}
+            {info.available}
           </span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-800 dark:text-green-400 scroll-fade-in">
-          Hello, I'm <span className="text-green-600 dark:text-green-300">{personalInfo.fullName}</span>
+          {t("Hello, I'm")} <span className="text-green-600 dark:text-green-300">{info.fullName}</span>
         </h1>
 
         <div className="flex items-center justify-center gap-3 mb-2 scroll-fade-in">
           <Code2 className="w-6 h-6 text-green-600 dark:text-green-400" />
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            {personalInfo.role}
+            {info.role}
           </p>
           <GrCloudSoftware className="w-6 h-6 text-green-600 dark:text-green-400" />
         </div>
 
         <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 mb-8 scroll-fade-in">
-          {personalInfo.description}
+          {info.description}
         </p>
 
         <div className="flex justify-center gap-4">
           {[
             {
               icon: Github,
-              href: personalInfo.social.github,
+              href: info.social.github,
               label: "GitHub",
               color: "hover:text-[#333] dark:hover:text-white"
             },
             {
               icon: Linkedin,
-              href: personalInfo.social.linkedin,
+              href: info.social.linkedin,
               label: "LinkedIn",
               color: "hover:text-[#0077b5] dark:hover:text-[#0077b5]"
             },
             {
               icon: Mail,
-              href: personalInfo.social.email,
+              href: info.social.email,
               label: "Email",
               color: "hover:text-red-500 dark:hover:text-red-400"
             },
             {
               icon: FileText,
-              href: personalInfo.social.cv,
+              href: info.social.cv,
               label: "CV",
               color: "hover:text-blue-500 dark:hover:text-blue-400"
             }

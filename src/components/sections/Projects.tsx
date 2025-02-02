@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { FaCode, FaExternalLinkAlt, FaProjectDiagram } from 'react-icons/fa';
 import { projects } from '@/data';
 import { Badge } from '@/components/ui/Badge';
+import { useTranslation } from 'react-i18next';
 
 interface Project {
   title: string;
@@ -19,6 +20,7 @@ interface Project {
 }
 
 export const Projects: React.FC = () => {
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,11 +47,11 @@ export const Projects: React.FC = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in flex items-center justify-center gap-2">
           <FaProjectDiagram className="w-8 h-8 text-green-400" />
-          Projects
+          {t('Projects')}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects.map((project: Project, index) => (
+          {projects().map((project: Project, index) => (
             <div
               key={index}
               className="project-card scroll-fade-in bg-white dark:bg-zinc-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-200"
@@ -103,10 +105,10 @@ export const Projects: React.FC = () => {
                       className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-300"
                     >
                       <FaCode className="w-4 h-4" />
-                      <span>Github Repository</span>
+                      <span>{t('Github Repository')}</span>
                     </a>
                   ) : (
-                    <span className="text-gray-500 dark:text-gray-400">No code available</span>
+                    <span className="text-gray-500 dark:text-gray-400">{t('No code available')}</span>
                   )}
                   {project.demo ? (
                     <a
@@ -116,10 +118,10 @@ export const Projects: React.FC = () => {
                       className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-300"
                     >
                       <FaExternalLinkAlt className="w-4 h-4" />
-                      <span>Live Preview</span>
+                      <span>{t('Live Preview')}</span>
                     </a>
                   ) : (
-                    <span className="text-gray-500 dark:text-gray-400">No demo available</span>
+                    <span className="text-gray-500 dark:text-gray-400">{t('No demo available')}</span>
                   )}
                 </div>
               </div>

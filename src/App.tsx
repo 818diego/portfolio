@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './i18n';
 import { Header } from './components/Header';
 import { Hero } from './components/sections/Hero';
 import { Experience } from './components/sections/Experience';

@@ -2,8 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { skills } from '../../data';
 import { ProgressBar } from '../ui/ProgressBar';
 import { FaTools } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 export const Skills: React.FC = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,10 +29,10 @@ export const Skills: React.FC = () => {
   }, []);
 
   const categories = [
-    { title: 'Languages', data: skills.languages },
-    { title: 'Frontend', data: skills.frontend },
-    { title: 'Backend', data: skills.backend },
-    { title: 'Tools', data: skills.tools }
+    { title: t('Languages'), data: skills().languages },
+    { title: t('Frontend'), data: skills().frontend },
+    { title: t('Backend'), data: skills().backend },
+    { title: t('Tools'), data: skills().tools }
   ];
 
   return (
@@ -38,7 +40,7 @@ export const Skills: React.FC = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-10 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
           <FaTools className="inline-block w-7 h-7 mr-2 text-green-500 dark:text-green-400 mb-1" />
-          Skills
+          {t('Skills')}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
