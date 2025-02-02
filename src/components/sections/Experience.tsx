@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { experiences } from '@/data';
 import { Calendar, Briefcase, CheckCircle2, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Experience: React.FC = () => {
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,11 +33,11 @@ export const Experience: React.FC = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in flex items-center justify-center gap-2">
           <Award className="w-8 h-8 text-green-500 dark:text-green-400 mt-1" />
-          Experience
+          {t('Experience')}
         </h2>
 
         <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => (
+          {experiences().map((exp, index) => (
             <div
               key={index}
               className="timeline-item relative mb-16 last:mb-0 pl-8 ml-8 border-l-2 border-green-200 dark:border-green-900"

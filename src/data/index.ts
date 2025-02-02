@@ -1,4 +1,4 @@
-export * from './personalInfo';
-export * from './experience';
-export * from './projects';
-export * from './skills';
+export { personalInfo } from './personalInfo';
+export { experiences } from './experience';
+export { projects } from './projects';
+export { skills } from './skills';
