@@ -32,7 +32,7 @@ export const experiences = () => {
     {
       title: t("Full Stack Developer"),
       company: "Hotel La Costa",
-      period: t("December 2023 - January 2024"),
+      period: t("October 2023 - January 2024"),
       description: t("Collaborated in the development and maintenance of a hotel management system using PHP and Laravel."),
       achievements: [
         t("Developed and optimized APIs to integrate key functionalities in a monolithic environment"),

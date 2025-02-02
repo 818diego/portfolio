@@ -192,7 +192,7 @@ const resources = {
         "Colaboré con el equipo de QA para asegurar la calidad del sistema y resolver eficientemente los errores",
       "Contributed to the redesign of the system to make it more scalable and efficient":
         "Contribuí al rediseño del sistema para hacerlo más escalable y eficiente",
-      "December 2023 - January 2024": "Diciembre 2023 - Enero 2024",
+      "October 2023 - January 2024": "Octubre 2023 - Enero 2024",
       "Collaborated in the development and maintenance of a hotel management system using PHP and Laravel.":
         "Colaboré en el desarrollo y mantenimiento de un sistema de gestión hotelera usando PHP y Laravel.",
       "Developed and optimized APIs to integrate key functionalities in a monolithic environment":

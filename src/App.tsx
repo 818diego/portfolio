@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './i18n';
-import { Header } from './components/Header';
+import { Header } from './components/sections/Header';
 import { Hero } from './components/sections/Hero';
-import { Experience } from './components/sections/Experience';
+import { Experience } from './components/ui/Experience';
 import { Projects } from './components/sections/Projects';
 import { Skills } from './components/sections/Skills';
-import { Footer } from './components/Footer';
-import { ScrollProgress } from './components/ScrollProgress';
-import ScrollToTopButton from './components/ScrollToTopButton';
+import { Footer } from './components/sections/Footer';
+import { ScrollProgress } from './components/ui/ScrollProgress';
+import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
