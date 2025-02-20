@@ -28,7 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
   return (
     <div
-      className="project-card scroll-fade-in bg-white dark:bg-zinc-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-200"
+      className="project-card scroll-fade-in bg-white dark:bg-zinc-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-200 flex flex-col"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="relative h-56 overflow-hidden">
@@ -42,11 +42,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         </div>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-green-300">
           {project.title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-4">
           {project.description}
         </p>
 
@@ -70,7 +70,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           ))}
         </div>
 
-        <div className="flex justify-center items-center pt-4 border-t border-gray-100 dark:border-zinc-700 gap-4">
+        {/* Contenedor de botones con mt-auto para empujarlos hacia abajo */}
+        <div className="mt-auto flex justify-center items-center pt-4 border-t border-gray-100 dark:border-zinc-700 gap-4">
           {project.github ? (
             <a
               href={project.github}
