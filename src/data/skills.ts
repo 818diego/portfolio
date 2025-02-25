@@ -20,19 +20,19 @@ export const skills = () => {
     ],
     frontend: [
       { name: t('React'), level: 75, icon: DiReact },
-      { name: t('Next.js'), level: 70, icon: RiNextjsFill },
-      { name: t('Astro'), level: 60, icon: SiAstro },
-      { name: t('Express'), level: 75, icon: SiExpress }
+      { name: t('Next.js'), level: 60, icon: RiNextjsFill },
+      { name: t('Astro'), level: 50, icon: SiAstro },
+      { name: t('Express'), level: 70, icon: SiExpress }
     ],
     backend: [
       { name: t('.NET Core/ASP.NET'), level: 70, icon: TbBrandCSharp },
-      { name: t('Express'), level: 75, icon: SiExpress },
+      { name: t('Express'), level: 70, icon: SiExpress },
     ],
     tools: [
-      { name: t('Git'), level: 80, icon: BsGithub },
-      { name: t('Docker'), level: 50, icon: FaDocker },
-      { name: t('MongoDB'), level: 70, icon: DiMongodb },
-      { name: t('SQL Server'), level: 70, icon: TbSql }
+      { name: t('Git'), level: 70, icon: BsGithub },
+      { name: t('Docker'), level: 40, icon: FaDocker },
+      { name: t('MongoDB'), level: 60, icon: DiMongodb },
+      { name: t('SQL Server'), level: 60, icon: TbSql }
     ]
   };
 };

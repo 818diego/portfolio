@@ -69,8 +69,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             </span>
           ))}
         </div>
-
-        {/* Contenedor de botones con mt-auto para empujarlos hacia abajo */}
         <div className="mt-auto flex justify-center items-center pt-4 border-t border-gray-100 dark:border-zinc-700 gap-4">
           {project.github ? (
             <a

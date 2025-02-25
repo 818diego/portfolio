@@ -6,6 +6,7 @@ import { Experience } from './components/ui/Experience';
 import { Projects } from './components/sections/Projects';
 import { Skills } from './components/sections/Skills';
 import { Footer } from './components/sections/Footer';
+import { ContactSection } from './components/sections/ContactSection';
 import { ScrollProgress } from './components/ui/ScrollProgress';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
@@ -22,6 +23,7 @@ function App() {
       <Experience />
       <Projects />
       <Skills />
+      <ContactSection />
       <Footer />
       <ScrollToTopButton />
     </div>
