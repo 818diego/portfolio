@@ -14,7 +14,9 @@ export const ContactInfo: React.FC = () => {
             .replace(/@here/gi, '@\u200bhere')
             .replace(/\/tts/gi, '/\u200btts')
             .replace(/\/me/gi, '/\u200bme')
-            .replace(/[`*~_|]/g, '')
+            .replace(/[`*~_|{}\[\]<>]/g, '')
+            .replace(/['"]/g, '')
+            .replace(/\\/g, '')
             .replace(/https?:\/\/[^\s]+/gi, '[link removed]');
     }
 
