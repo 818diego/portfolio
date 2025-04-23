@@ -8,23 +8,36 @@ export const ContactInfo: React.FC = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const sanitizeMessage = (text: string): string => {
+        return text
+            .replace(/@everyone/gi, '@\u200beveryone')
+            .replace(/@here/gi, '@\u200bhere')
+            .replace(/\/tts/gi, '/\u200btts')
+            .replace(/\/me/gi, '/\u200bme')
+            .replace(/[`*~_|]/g, '')
+            .replace(/https?:\/\/[^\s]+/gi, '[link removed]');
+    }
+
     const handleSubmit = async () => {
-        const webhookUrl = 'https://discord.com/api/webhooks/1344042001921871973/bEqvFdHAdm_LbruFTK0mJi0a1SMsCDaKYmB1syUE5jC_JP3fzr3lHLPpFf__xZT_ckpX';
+        const webhookUrl = 'https://discord.com/api/webhooks/xxxxx/yyyy';
         const embed = {
             title: "New Contact Form Submission",
             fields: [
-                { name: "Name", value: name, inline: true },
-                { name: "Email", value: email, inline: true },
-                { name: "Message", value: message }
+                { name: "Name", value: sanitizeMessage(name), inline: true },
+                { name: "Email", value: sanitizeMessage(email), inline: true },
+                { name: "Message", value: sanitizeMessage(message) }
             ]
         };
 
         try {
-            await axios.post(webhookUrl, { embeds: [embed] });
-            alert(t("Message sent successfully!"));
+            await axios.post(webhookUrl, {
+                embeds: [embed],
+                tts: false,
+            });
+            alert("Message sent successfully!");
         } catch (error) {
             console.error("Error sending message to Discord", error);
-            alert(t("Failed to send message."));
+            alert("Failed to send message.");
         }
     };
 
