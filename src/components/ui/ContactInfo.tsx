@@ -19,7 +19,7 @@ export const ContactInfo: React.FC = () => {
     }
 
     const handleSubmit = async () => {
-        const webhookUrl = 'https://discord.com/api/webhooks/xxxxx/yyyy';
+        const webhookUrl = 'https://discord.com/api/webhooks/1364675211454189700/gddcWXAR1fzlYUgq6oWgaisXXJ01zTZ793Ti6sb_ex5tr7A27UcKRPZNQnzIRQK-Vbsg';
         const embed = {
             title: "New Contact Form Submission",
             fields: [
