@@ -60,6 +60,7 @@ export const projects = () => {
       title: t("Hotel Management"),
       description: t("Refactored code, made design changes, and worked on the system using Laravel for APIs, PHP, Bootstrap, and jQuery."),
       image: "https://imgur.com/ysgGsI6.png",
+      demo: "https://palegreen-crow-554205.hostingersite.com/",
       tech: [
         { name: "Laravel", icon: FaLaravel },
         { name: "PHP", icon: FaPhp },
