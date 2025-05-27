@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { personalInfo } from '@/data';
 import { useTranslation } from 'react-i18next';
 
@@ -18,7 +18,6 @@ export const Footer: React.FC = () => {
             {[
               { icon: Github, href: info.social.github, label: t("GitHub Profile") },
               { icon: Linkedin, href: info.social.linkedin, label: t("LinkedIn Profile") },
-              { icon: Mail, href: info.social.email, label: t("Send Email") }
             ].map((social, index) => (
               <a
                 key={index}
