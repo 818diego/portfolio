@@ -48,9 +48,6 @@ export const ContactInfo: React.FC = () => {
             <div className="flex flex-col justify-center items-center p-6 w-1/2">
                 <h3 className="text-xl font-bold text-green-700 dark:text-green-400">{t("I'd love to hear from you!")}</h3>
                 <p className="mt-4 text-gray-600 dark:text-gray-300">{t("If you have any questions or want to discuss a project, feel free to contact me.")}</p>
-                <div className="mt-4">
-                    <p className=" text-semibold text-green-700 dark:text-green-400">diego.fmerinoh@gmail.com</p>
-                </div>
             </div>
             <div className="border-l border-gray-300 dark:border-zinc-700"></div>
             <div className="p-6 w-1/2">

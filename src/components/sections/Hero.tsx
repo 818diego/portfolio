@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Github, Linkedin, Mail, Code2, FileText } from 'lucide-react';
+import { Github, Linkedin, Code2, FileText } from 'lucide-react';
 import { BsTerminalFill } from 'react-icons/bs';
 import { GrCloudSoftware } from 'react-icons/gr';
 import { personalInfo } from '@/data';
@@ -74,12 +74,6 @@ export const Hero: React.FC = () => {
               href: info.social.linkedin,
               label: "LinkedIn",
               color: "hover:text-[#0077b5] dark:hover:text-[#0077b5]"
-            },
-            {
-              icon: Mail,
-              href: info.social.email,
-              label: "Email",
-              color: "hover:text-red-500 dark:hover:text-red-400"
             },
             {
               icon: FileText,
