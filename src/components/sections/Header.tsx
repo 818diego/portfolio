@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode 
           >
             <IoLanguageOutline className="text-gray-800 dark:text-green-400 w-6 h-6" />
             <span className="ml-2 text-gray-800 dark:text-green-400">
-              {i18n.language === 'en' ? 'ESP' : 'ENG'}
+              {i18n.language === 'en' ? 'ENG' : 'ESP'}
             </span>
           </button>
         </div>
