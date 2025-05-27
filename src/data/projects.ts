@@ -1,22 +1,8 @@
-import {
-  FaGlobe,
-  FaMobileAlt,
-  FaServer,
-  FaRobot,
-  FaBrain,
-  FaReact,
-  FaPhp,
-  FaBootstrap,
-  FaDiscord,
-  FaNodeJs,
-  FaPython,
-  FaHtml5,
-  FaFigma,
-} from "react-icons/fa";
+import { FaGlobe, FaMobileAlt, FaServer, FaRobot, FaBrain, FaReact, FaPhp, FaBootstrap, FaDiscord, FaNodeJs, FaPython, FaHtml5, FaFigma } from "react-icons/fa";
 import { FaCss3, FaJs, FaLaravel } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTensorflow, SiTypescript } from "react-icons/si";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export const projects = () => {
   const { t } = useTranslation();
@@ -24,7 +10,7 @@ export const projects = () => {
   return [
     {
       title: t("Managenments Sales System"),
-      description: t("Worked on the design using NextJS and TailwindCSS, following Agile Scrum methodology and managed RESTful APIs."),
+      description: t("I led frontend development with NextJS and TailwindCSS, implementing responsive design principles while following Agile Scrum methodology. I developed and integrated RESTful APIs for seamless data flow."),
       image: "https://i.imgur.com/uZmrZsm.png",
       demo: "https://management-sales.vercel.app/",
       tech: [
@@ -41,7 +27,7 @@ export const projects = () => {
     },
     {
       title: t("Appointment Management Mobile App"),
-      description: t("Worked on the UI and UX of the application, connecting the backend with the frontend using RESTful APIs. Designed in Figma and worked with React Native and vanilla CSS in React Native with JavaScript."),
+      description: t("I crafted intuitive UI/UX designs in Figma and implemented them with React Native. I established robust backend-frontend integration through RESTful APIs, enhancing user experience with custom CSS solutions."),
       image: "https://imgur.com/Zft00zN.png",
       tech: [
         { name: "React Native", icon: FaReact },
@@ -58,7 +44,7 @@ export const projects = () => {
     },
     {
       title: t("Hotel Management"),
-      description: t("Refactored code, made design changes, and worked on the system using Laravel for APIs, PHP, Bootstrap, and jQuery."),
+      description: t("I optimized the existing codebase through strategic refactoring and modernized the user interface. I developed and maintained robust API endpoints using Laravel, while enhancing functionality with PHP, Bootstrap, and jQuery."),
       image: "https://imgur.com/ysgGsI6.png",
       demo: "https://palegreen-crow-554205.hostingersite.com/",
       tech: [
@@ -76,7 +62,9 @@ export const projects = () => {
     },
     {
       title: t("Supremo Team Website"),
-      description: t("This is a personal project where I created a Discord bot dedicated to the Discord community, which plays music and is a multifunctional security bot for servers."),
+      description: t(
+        "I developed a comprehensive Discord solution as a personal project, featuring an advanced music player and robust security functionality. I implemented it with Discord.js and Node.js to enhance community engagement and server protection."
+      ),
       image: "https://i.imgur.com/qNHkO5e.png",
       demo: "https://www.supremito.xyz/",
       tech: [
@@ -93,7 +81,9 @@ export const projects = () => {
     },
     {
       title: t("Dog Breed Prediction Web App"),
-      description: t("This is a final university project, in which we developed a convolutional neural network to predict dog breeds, and a web application was created to interact with the neural network and predict more than 100 dog breeds."),
+      description: t(
+        "I engineered a sophisticated AI application as my final university project, implementing a convolutional neural network capable of identifying over 100 dog breeds. I developed an intuitive web interface allowing users to interact seamlessly with the AI model."
+      ),
       image: "https://i.imgur.com/hNL4pj3.png",
       demo: "https://dogsvision.supremito.xyz/",
       tech: [

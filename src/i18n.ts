@@ -18,8 +18,8 @@ const resources = {
       MongoDB: "MongoDB",
       "SQL Server": "SQL Server",
       "Managenments Sales System": "Managenments Sales System",
-      "Worked on the design using NextJS and TailwindCSS, following Agile Scrum methodology and managed RESTful APIs.":
-        "Worked on the design using NextJS and TailwindCSS, following Agile Scrum methodology and managed RESTful APIs.",
+      "I led frontend development with NextJS and TailwindCSS, implementing responsive design principles while following Agile Scrum methodology. I developed and integrated RESTful APIs for seamless data flow.":
+        "I led frontend development with NextJS and TailwindCSS, implementing responsive design principles while following Agile Scrum methodology. I developed and integrated RESTful APIs for seamless data flow.",
       "Sales Management": "Sales Management",
       "Admin Dashboard": "Admin Dashboard",
       "RESTful APIs": "RESTful APIs",
@@ -28,31 +28,31 @@ const resources = {
       "4 months": "4 months",
       "Sales process optimization": "Sales process optimization",
       "Appointment Management Mobile App": "Appointment Management Mobile App",
-      "Worked on the UI and UX of the application, connecting the backend with the frontend using RESTful APIs. Designed in Figma and worked with React Native and vanilla CSS in React Native with JavaScript.":
-        "Worked on the UI and UX of the application, connecting the backend with the frontend using RESTful APIs. Designed in Figma and worked with React Native and vanilla CSS in React Native with JavaScript.",
+      "I crafted intuitive UI/UX designs in Figma and implemented them with React Native. I established robust backend-frontend integration through RESTful APIs, enhancing user experience with custom CSS solutions.":
+        "I crafted intuitive UI/UX designs in Figma and implemented them with React Native. I established robust backend-frontend integration through RESTful APIs, enhancing user experience with custom CSS solutions.",
       "UI/UX Design": "UI/UX Design",
       "Mobile First": "Mobile First",
       Agile: "Agile",
       "2 months": "2 months",
       "Enhanced user experience": "Enhanced user experience",
       "Hotel Management": "Hotel Management",
-      "Refactored code, made design changes, and worked on the system using Laravel for APIs, PHP, Bootstrap, and jQuery.":
-        "Refactored code, made design changes, and worked on the system using Laravel for APIs, PHP, Bootstrap, and jQuery.",
+      "I optimized the existing codebase through strategic refactoring and modernized the user interface. I developed and maintained robust API endpoints using Laravel, while enhancing functionality with PHP, Bootstrap, and jQuery.":
+        "I optimized the existing codebase through strategic refactoring and modernized the user interface. I developed and maintained robust API endpoints using Laravel, while enhancing functionality with PHP, Bootstrap, and jQuery.",
       "Code Refactoring": "Code Refactoring",
       "System Design": "System Design",
       "Performance Optimization": "Performance Optimization",
       Waterfall: "Waterfall",
       "System efficiency improvement": "System efficiency improvement",
       "Supremo Team Website": "Supremo Team Website",
-      "This is a personal project where I created a Discord bot dedicated to the Discord community, which plays music and is a multifunctional security bot for servers.":
-        "This is a personal project where I created a Discord bot dedicated to the Discord community, which plays music and is a multifunctional security bot for servers.",
+      "I developed a comprehensive Discord solution as a personal project, featuring an advanced music player and robust security functionality. I implemented it with Discord.js and Node.js to enhance community engagement and server protection.":
+        "I developed a comprehensive Discord solution as a personal project, featuring an advanced music player and robust security functionality. I implemented it with Discord.js and Node.js to enhance community engagement and server protection.",
       "Music Bot": "Music Bot",
       "Server Security": "Server Security",
       Automation: "Automation",
       "Community management improvement": "Community management improvement",
       "Dog Breed Prediction Web App": "Dog Breed Prediction Web App",
-      "This is a final university project, in which we developed a convolutional neural network to predict dog breeds, and a web application was created to interact with the neural network and predict more than 100 dog breeds.":
-        "This is a final university project, in which we developed a convolutional neural network to predict dog breeds, and a web application was created to interact with the neural network and predict more than 100 dog breeds.",
+      "I engineered a sophisticated AI application as my final university project, implementing a convolutional neural network capable of identifying over 100 dog breeds. I developed an intuitive web interface allowing users to interact seamlessly with the AI model.":
+        "I engineered a sophisticated AI application as my final university project, implementing a convolutional neural network capable of identifying over 100 dog breeds. I developed an intuitive web interface allowing users to interact seamlessly with the AI model.",
       "AI Prediction": "AI Prediction",
       "Convolutional Neural Network": "Convolutional Neural Network",
       "100+ Breeds": "100+ Breeds",
@@ -64,34 +64,22 @@ const resources = {
       "Available for projects": "Available for projects",
       "Full Stack Developer": "Full Stack Developer",
       "January 2024 - Present": "January 2024 - Present",
-      "Development of web and mobile solutions for clients from various industries, from conceptualization to delivery.":
-        "Development of web and mobile solutions for clients from various industries, from conceptualization to delivery.",
-      "Collaborated with clients on projects of different sizes, adapting to their specific needs":
-        "Collaborated with clients on projects of different sizes, adapting to their specific needs",
-      "Optimized the performance of delivered applications, improving load times":
-        "Optimized the performance of delivered applications, improving load times",
-      "Established trust relationships with clients by meeting deadlines and maintaining high quality standards":
-        "Established trust relationships with clients by meeting deadlines and maintaining high quality standards",
+      "Development of web and mobile solutions for clients from various industries, from conceptualization to delivery.": "Development of web and mobile solutions for clients from various industries, from conceptualization to delivery.",
+      "Collaborated with clients on projects of different sizes, adapting to their specific needs": "Collaborated with clients on projects of different sizes, adapting to their specific needs",
+      "Optimized the performance of delivered applications, improving load times": "Optimized the performance of delivered applications, improving load times",
+      "Established trust relationships with clients by meeting deadlines and maintaining high quality standards": "Established trust relationships with clients by meeting deadlines and maintaining high quality standards",
       Intern: "Intern",
       "PT DILATO INFORMATION TECHNOLOGY": "PT DILATO INFORMATION TECHNOLOGY",
       "September 2024 - November 2024": "September 2024 - November 2024",
-      "Participated in the migration of a sales system to modern technologies, working on frontend development.":
-        "Participated in the migration of a sales system to modern technologies, working on frontend development.",
-      "Developed frontend components using Next.js, improving user experience":
-        "Developed frontend components using Next.js, improving user experience",
-      "Collaborated with the QA team to ensure system quality and efficiently resolve bugs":
-        "Collaborated with the QA team to ensure system quality and efficiently resolve bugs",
-      "Contributed to the redesign of the system to make it more scalable and efficient":
-        "Contributed to the redesign of the system to make it more scalable and efficient",
+      "Participated in the migration of a sales system to modern technologies, working on frontend development.": "Participated in the migration of a sales system to modern technologies, working on frontend development.",
+      "Developed frontend components using Next.js, improving user experience": "Developed frontend components using Next.js, improving user experience",
+      "Collaborated with the QA team to ensure system quality and efficiently resolve bugs": "Collaborated with the QA team to ensure system quality and efficiently resolve bugs",
+      "Contributed to the redesign of the system to make it more scalable and efficient": "Contributed to the redesign of the system to make it more scalable and efficient",
       "December 2023 - January 2024": "December 2023 - January 2024",
-      "Collaborated in the development and maintenance of a hotel management system using PHP and Laravel.":
-        "Collaborated in the development and maintenance of a hotel management system using PHP and Laravel.",
-      "Developed and optimized APIs to integrate key functionalities in a monolithic environment":
-        "Developed and optimized APIs to integrate key functionalities in a monolithic environment",
-      "Improved system stability and performance, ensuring its proper operation in the production environment":
-        "Improved system stability and performance, ensuring its proper operation in the production environment",
-      "Worked in a team to implement new features and resolve technical issues":
-        "Worked in a team to implement new features and resolve technical issues",
+      "Collaborated in the development and maintenance of a hotel management system using PHP and Laravel.": "Collaborated in the development and maintenance of a hotel management system using PHP and Laravel.",
+      "Developed and optimized APIs to integrate key functionalities in a monolithic environment": "Developed and optimized APIs to integrate key functionalities in a monolithic environment",
+      "Improved system stability and performance, ensuring its proper operation in the production environment": "Improved system stability and performance, ensuring its proper operation in the production environment",
+      "Worked in a team to implement new features and resolve technical issues": "Worked in a team to implement new features and resolve technical issues",
       "Hello, I'm": "Hello, I'm",
       Experience: "Experience",
       Projects: "Projects",
@@ -107,8 +95,7 @@ const resources = {
       "All rights reserved": "All rights reserved",
       Contact: "Contact",
       "I'd love to hear from you!": "I'd love to hear from you!",
-      "If you have any questions or want to discuss a project, feel free to contact me.":
-        "If you have any questions or want to discuss a project, feel free to contact me.",
+      "If you have any questions or want to discuss a project, feel free to contact me.": "If you have any questions or want to discuss a project, feel free to contact me.",
       "Send me a message": "Send me a message",
       Name: "Name",
       "Your name": "Your name",
@@ -135,8 +122,8 @@ const resources = {
       MongoDB: "MongoDB",
       "SQL Server": "SQL Server",
       "Managenments Sales System": "Sistema de Gestión de Ventas",
-      "Worked on the design using NextJS and TailwindCSS, following Agile Scrum methodology and managed RESTful APIs.":
-        "Trabajé en el diseño usando NextJS y TailwindCSS, siguiendo la metodología Agile Scrum y gestionando APIs RESTful.",
+      "I led frontend development with NextJS and TailwindCSS, implementing responsive design principles while following Agile Scrum methodology. I developed and integrated RESTful APIs for seamless data flow.":
+        "Lideré el desarrollo frontend con NextJS y TailwindCSS, implementando principios de diseño responsivo mientras seguía la metodología Agile Scrum. Desarrollé e integré APIs RESTful para un flujo de datos sin interrupciones.",
       "Sales Management": "Gestión de Ventas",
       "Admin Dashboard": "Panel de Administración",
       "RESTful APIs": "APIs RESTful",
@@ -144,75 +131,59 @@ const resources = {
       "3 developers": "3 desarrolladores",
       "4 months": "4 meses",
       "Sales process optimization": "Optimización del proceso de ventas",
-      "Appointment Management Mobile App":
-        "Aplicación Móvil de Gestión de Citas",
-      "Worked on the UI and UX of the application, connecting the backend with the frontend using RESTful APIs. Designed in Figma and worked with React Native and vanilla CSS in React Native with JavaScript.":
-        "Trabajé en la UI y UX de la aplicación, conectando el backend con el frontend usando APIs RESTful. Diseñado en Figma y trabajado con React Native y CSS puro en React Native con JavaScript.",
+      "Appointment Management Mobile App": "Aplicación Móvil de Gestión de Citas",
+      "I crafted intuitive UI/UX designs in Figma and implemented them with React Native. I established robust backend-frontend integration through RESTful APIs, enhancing user experience with custom CSS solutions.":
+        "Diseñé interfaces UI/UX intuitivas en Figma y las implementé con React Native. Establecí una sólida integración backend-frontend a través de APIs RESTful, mejorando la experiencia del usuario con soluciones CSS personalizadas.",
       "UI/UX Design": "Diseño UI/UX",
       "Mobile First": "Primero Móvil",
       Agile: "Ágil",
       "2 months": "2 meses",
       "Enhanced user experience": "Mejora de la experiencia del usuario",
       "Hotel Management": "Gestión Hotelera",
-      "Refactored code, made design changes, and worked on the system using Laravel for APIs, PHP, Bootstrap, and jQuery.":
-        "Refactoricé el código, hice cambios de diseño y trabajé en el sistema usando Laravel para APIs, PHP, Bootstrap y jQuery.",
+      "I optimized the existing codebase through strategic refactoring and modernized the user interface. I developed and maintained robust API endpoints using Laravel, while enhancing functionality with PHP, Bootstrap, and jQuery.":
+        "Optimicé el código existente mediante una refactorización estratégica y modernizé la interfaz de usuario. Desarrollé y mantuve endpoints de API robustos usando Laravel, mejorando la funcionalidad con PHP, Bootstrap y jQuery.",
       "Code Refactoring": "Refactorización de Código",
       "System Design": "Diseño del Sistema",
       "Performance Optimization": "Optimización del Rendimiento",
       Waterfall: "Cascada",
       "System efficiency improvement": "Mejora de la eficiencia del sistema",
       "Supremo Team Website": "Sitio Web del Equipo Supremo",
-      "This is a personal project where I created a Discord bot dedicated to the Discord community, which plays music and is a multifunctional security bot for servers.":
-        "Este es un proyecto personal donde creé un bot de Discord dedicado a la comunidad de Discord, que reproduce música y es un bot de seguridad multifuncional para servidores.",
+      "I developed a comprehensive Discord solution as a personal project, featuring an advanced music player and robust security functionality. I implemented it with Discord.js and Node.js to enhance community engagement and server protection.":
+        "Desarrollé una solución integral para Discord como proyecto personal, con un avanzado reproductor de música y funcionalidades de seguridad robustas. Lo implementé con Discord.js y Node.js para mejorar la participación de la comunidad y la protección del servidor.",
       "Music Bot": "Bot de Música",
       "Server Security": "Seguridad del Servidor",
       Automation: "Automatización",
-      "Community management improvement":
-        "Mejora de la gestión de la comunidad",
-      "Dog Breed Prediction Web App":
-        "Aplicación Web de Predicción de Razas de Perros",
-      "This is a final university project, in which we developed a convolutional neural network to predict dog breeds, and a web application was created to interact with the neural network and predict more than 100 dog breeds.":
-        "Este es un proyecto final de la universidad, en el que desarrollamos una red neuronal convolucional para predecir razas de perros, y se creó una aplicación web para interactuar con la red neuronal y predecir más de 100 razas de perros.",
+      "Community management improvement": "Mejora de la gestión de la comunidad",
+      "Dog Breed Prediction Web App": "Aplicación Web de Predicción de Razas de Perros",
+      "I engineered a sophisticated AI application as my final university project, implementing a convolutional neural network capable of identifying over 100 dog breeds. I developed an intuitive web interface allowing users to interact seamlessly with the AI model.":
+        "Diseñé una sofisticada aplicación de IA como mi proyecto final universitario, implementando una red neuronal convolucional capaz de identificar más de 100 razas de perros. Desarrollé una interfaz web intuitiva que permite a los usuarios interactuar sin problemas con el modelo de IA.",
       "AI Prediction": "Predicción de IA",
       "Convolutional Neural Network": "Red Neuronal Convolucional",
       "100+ Breeds": "100+ Razas",
       Iterative: "Iterativo",
       "AI Technology Innovation": "Innovación en Tecnología de IA",
-      "Software Engineer & Web Developer":
-        "Ingeniero de Software y Desarrollador Web",
+      "Software Engineer & Web Developer": "Ingeniero de Software y Desarrollador Web",
       "Software engineer with experience in modern technologies and agile methodologies. Specialised in the creation of systems, sites, and web applications.":
         "Ingeniero de software con experiencia en tecnologías modernas y metodologías ágiles. Especializado en la creación de sistemas, sitios y aplicaciones web.",
       "Available for projects": "Disponible para proyectos",
       "Full Stack Developer": "Desarrollador Full Stack",
       "January 2024 - Present": "Enero 2024 - Presente",
-      "Development of web and mobile solutions for clients from various industries, from conceptualization to delivery.":
-        "Desarrollo de soluciones web y móviles para clientes de diversas industrias, desde la conceptualización hasta la entrega.",
-      "Collaborated with clients on projects of different sizes, adapting to their specific needs":
-        "Colaboré con clientes en proyectos de diferentes tamaños, adaptándome a sus necesidades específicas",
-      "Optimized the performance of delivered applications, improving load times":
-        "Optimizé el rendimiento de las aplicaciones entregadas, mejorando los tiempos de carga",
-      "Established trust relationships with clients by meeting deadlines and maintaining high quality standards":
-        "Establecí relaciones de confianza con los clientes cumpliendo con los plazos y manteniendo altos estándares de calidad",
+      "Development of web and mobile solutions for clients from various industries, from conceptualization to delivery.": "Desarrollo de soluciones web y móviles para clientes de diversas industrias, desde la conceptualización hasta la entrega.",
+      "Collaborated with clients on projects of different sizes, adapting to their specific needs": "Colaboré con clientes en proyectos de diferentes tamaños, adaptándome a sus necesidades específicas",
+      "Optimized the performance of delivered applications, improving load times": "Optimizé el rendimiento de las aplicaciones entregadas, mejorando los tiempos de carga",
+      "Established trust relationships with clients by meeting deadlines and maintaining high quality standards": "Establecí relaciones de confianza con los clientes cumpliendo con los plazos y manteniendo altos estándares de calidad",
       Intern: "Practicante",
       "PT DILATO INFORMATION TECHNOLOGY": "PT DILATO INFORMATION TECHNOLOGY",
       "September 2024 - November 2024": "Septiembre 2024 - Noviembre 2024",
-      "Participated in the migration of a sales system to modern technologies, working on frontend development.":
-        "Participé en la migración de un sistema de ventas a tecnologías modernas, trabajando en el desarrollo frontend.",
-      "Developed frontend components using Next.js, improving user experience":
-        "Desarrollé componentes frontend usando Next.js, mejorando la experiencia del usuario",
-      "Collaborated with the QA team to ensure system quality and efficiently resolve bugs":
-        "Colaboré con el equipo de QA para asegurar la calidad del sistema y resolver eficientemente los errores",
-      "Contributed to the redesign of the system to make it more scalable and efficient":
-        "Contribuí al rediseño del sistema para hacerlo más escalable y eficiente",
+      "Participated in the migration of a sales system to modern technologies, working on frontend development.": "Participé en la migración de un sistema de ventas a tecnologías modernas, trabajando en el desarrollo frontend.",
+      "Developed frontend components using Next.js, improving user experience": "Desarrollé componentes frontend usando Next.js, mejorando la experiencia del usuario",
+      "Collaborated with the QA team to ensure system quality and efficiently resolve bugs": "Colaboré con el equipo de QA para asegurar la calidad del sistema y resolver eficientemente los errores",
+      "Contributed to the redesign of the system to make it more scalable and efficient": "Contribuí al rediseño del sistema para hacerlo más escalable y eficiente",
       "October 2023 - January 2024": "Octubre 2023 - Enero 2024",
-      "Collaborated in the development and maintenance of a hotel management system using PHP and Laravel.":
-        "Colaboré en el desarrollo y mantenimiento de un sistema de gestión hotelera usando PHP y Laravel.",
-      "Developed and optimized APIs to integrate key functionalities in a monolithic environment":
-        "Desarrollé y optimicé APIs para integrar funcionalidades clave en un entorno monolítico",
-      "Improved system stability and performance, ensuring its proper operation in the production environment":
-        "Mejoré la estabilidad y el rendimiento del sistema, asegurando su correcto funcionamiento en el entorno de producción",
-      "Worked in a team to implement new features and resolve technical issues":
-        "Trabajé en equipo para implementar nuevas funcionalidades y resolver problemas técnicos",
+      "Collaborated in the development and maintenance of a hotel management system using PHP and Laravel.": "Colaboré en el desarrollo y mantenimiento de un sistema de gestión hotelera usando PHP y Laravel.",
+      "Developed and optimized APIs to integrate key functionalities in a monolithic environment": "Desarrollé y optimicé APIs para integrar funcionalidades clave en un entorno monolítico",
+      "Improved system stability and performance, ensuring its proper operation in the production environment": "Mejoré la estabilidad y el rendimiento del sistema, asegurando su correcto funcionamiento en el entorno de producción",
+      "Worked in a team to implement new features and resolve technical issues": "Trabajé en equipo para implementar nuevas funcionalidades y resolver problemas técnicos",
       "Hello, I'm": "Hola, soy",
       Experience: "Experiencia",
       Projects: "Proyectos",
@@ -228,8 +199,7 @@ const resources = {
       "All rights reserved": "Todos los derechos reservados",
       Contact: "Contacto",
       "I'd love to hear from you!": "¡Me encantaría escuchar de ti!",
-      "If you have any questions or want to discuss a project, feel free to contact me.":
-        "Si tienes alguna pregunta o deseas discutir un proyecto, no dudes en contactarme.",
+      "If you have any questions or want to discuss a project, feel free to contact me.": "Si tienes alguna pregunta o deseas discutir un proyecto, no dudes en contactarme.",
       "Send me a message": "Enviame un mensaje",
       Name: "Nombre",
       "Your name": "Tu nombre",
