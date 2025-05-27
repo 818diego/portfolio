@@ -7,6 +7,8 @@ export const ContactInfo: React.FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
 
     const sanitizeMessage = (text: string): string => {
         return text
@@ -18,10 +20,14 @@ export const ContactInfo: React.FC = () => {
             .replace(/['"]/g, '')
             .replace(/\\/g, '')
             .replace(/https?:\/\/[^\s]+/gi, '[link removed]');
-    }
-
+    };
     const handleSubmit = async () => {
-        const webhookUrl = 'https://discord.com/api/webhooks/1364675211454189700/gddcWXAR1fzlYUgq6oWgaisXXJ01zTZ793Ti6sb_ex5tr7A27UcKRPZNQnzIRQK-Vbsg';
+        if (!name || !email || !message) {
+            alert(t("Please fill in all fields"));
+            return;
+        }
+        setIsSubmitting(true);
+        const webhookUrl = 'https://discord.com/api/webhooks/1376725432920969298/ByTuW1ouSOaK4vSXFm03QZHU-PjNaJgf8MPL-804Qt73X1CWtr4ymCX3rGdLDYJSzGcT';
         const embed = {
             title: "New Contact Form Submission",
             fields: [
@@ -36,22 +42,39 @@ export const ContactInfo: React.FC = () => {
                 embeds: [embed],
                 tts: false,
             });
-            alert("Message sent successfully!");
+            setName('');
+            setEmail('');
+            setMessage('');
+            setShowSuccess(true);
+            setTimeout(() => {
+                setShowSuccess(false);
+            }, 3000);
         } catch (error) {
             console.error("Error sending message to Discord", error);
-            alert("Failed to send message.");
+            alert(t("Failed to send message. Please try again later."));
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
     return (
-        <div className="max-w-full mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden flex">
-            <div className="flex flex-col justify-center items-center p-6 w-1/2">
+        <div className="max-w-full mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
+            <div className="flex flex-col justify-center items-center p-6 w-full md:w-1/2">
                 <h3 className="text-xl font-bold text-green-700 dark:text-green-400">{t("I'd love to hear from you!")}</h3>
                 <p className="mt-4 text-gray-600 dark:text-gray-300">{t("If you have any questions or want to discuss a project, feel free to contact me.")}</p>
             </div>
-            <div className="border-l border-gray-300 dark:border-zinc-700"></div>
-            <div className="p-6 w-1/2">
-                <h3 className="text-2xl font-bold text-green-600 dark:text-green-400">{t("Send me a message")}</h3>
+            <div className="hidden md:block border-l border-gray-300 dark:border-zinc-700"></div>
+            <div className="p-6 w-full md:w-1/2 relative">
+                <h3 className="text-2xl font-bold text-green-600 dark:text-green-400">{t("Send me a message")}</h3>                <div className={`fixed inset-0 flex items-center justify-center z-10 pointer-events-none ${showSuccess ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200`}>
+                    <div className="bg-green-100 dark:bg-green-900 border-2 border-green-500 rounded-lg p-4 shadow-lg max-w-xs w-full mx-4">
+                        <div className="flex items-center">
+                            <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <p className="text-green-700 dark:text-green-300 font-medium">{t("Message sent successfully!")}</p>
+                        </div>
+                    </div>
+                </div>
                 <form className="mt-4">
                     <div className="mb-4">
                         <label className="flex text-green-600 dark:text-green-400 text-[15px] font-bold mb-2" htmlFor="name">
@@ -64,6 +87,7 @@ export const ContactInfo: React.FC = () => {
                             placeholder={t("Your name")}
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            disabled={isSubmitting}
                         />
                     </div>
                     <div className="mb-4">
@@ -77,6 +101,7 @@ export const ContactInfo: React.FC = () => {
                             placeholder={t("Your email address")}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            disabled={isSubmitting}
                         />
                     </div>
                     <div className="mb-4">
@@ -89,19 +114,22 @@ export const ContactInfo: React.FC = () => {
                             placeholder={t("Your message")}
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
+                            disabled={isSubmitting}
+                            rows={4}
                         />
                     </div>
                     <div className="flex items-center justify-around">
                         <button
-                            className="bg-green-500 hover:bg-green-700 transition-all text-black font-bold py-2 px-4 rounded focus:outline-none"
+                            className={`bg-green-500 hover:bg-green-700 transition-all text-black font-bold py-2 px-4 rounded focus:outline-none ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                             type="button"
                             onClick={handleSubmit}
+                            disabled={isSubmitting}
                         >
-                            {t("Send")}
+                            {isSubmitting ? t("Sending...") : t("Send")}
                         </button>
                     </div>
                 </form>
             </div>
         </div>
     );
-}
+};
