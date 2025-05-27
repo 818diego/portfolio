@@ -9,7 +9,7 @@ const SkillCategory: React.FC<{ title: string; data: any[]; index: number }> = (
         <h3 className="text-xl font-bold mb-6 text-gray-800 dark:text-green-300">
             {title}
         </h3>
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {data.map((skill, skillIndex) => (
                 <SkillItem key={skillIndex} skill={skill} index={index} skillIndex={skillIndex} />
             ))}
