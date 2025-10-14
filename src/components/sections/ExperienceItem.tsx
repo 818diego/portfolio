@@ -4,10 +4,10 @@ import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 export const ExperienceItem: React.FC<{ exp: any, index: number }> = ({ exp, index }) => {
     return (
         <div
-            className="timeline-item relative mb-16 last:mb-0 pl-8 ml-8 border-l-2 border-green-200 dark:border-green-900"
+            className="timeline-item relative mb-16 last:mb-0 pl-12 ml-6 border-l-2 border-green-200 dark:border-green-900"
             style={{ animationDelay: `${index * 0.2}s` }}
         >
-            <div className="absolute -left-[41px] top-0 p-2 bg-white dark:bg-zinc-800 rounded-full border-2 border-green-500 dark:border-green-400 timeline-dot">
+            <div className="absolute -left-[21px] top-0 p-2 bg-white dark:bg-zinc-800 rounded-full border-2 border-green-500 dark:border-green-400 timeline-dot">
                 <exp.icon className="w-6 h-6 text-green-500 dark:text-green-400" />
             </div>
             <div className="bg-white dark:bg-zinc-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all">
