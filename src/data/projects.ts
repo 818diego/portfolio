@@ -1,4 +1,4 @@
-import { FaGlobe, FaMobileAlt, FaServer, FaRobot, FaBrain, FaReact, FaPhp, FaBootstrap, FaDiscord, FaNodeJs, FaPython, FaHtml5, FaFigma } from "react-icons/fa";
+import { FaGlobe, FaMobileAlt, FaServer, FaRobot, FaBrain, FaReact, FaPhp, FaBootstrap, FaDiscord, FaNodeJs, FaPython, FaHtml5, FaFigma, FaGamepad } from "react-icons/fa";
 import { FaCss3, FaJs, FaLaravel } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTensorflow, SiTypescript } from "react-icons/si";
@@ -99,6 +99,26 @@ export const projects = () => {
       duration: t("1 month"),
       impact: t("AI Technology Innovation"),
       icon: FaBrain,
+    },
+    {
+      title: t("Dalton Life Website"),
+      description: t(
+        "I developed a comprehensive website for Dalton Life, a brand dedicated to selling GTA V roleplay scripts for the FiveM game engine. The website showcases their products and services, including their own roleplay server, providing an engaging platform for the gaming community."
+      ),
+      image: "https://i.imgur.com/kFIBKiU.png",
+      demo: "https://www.daltonxlife.org/",
+      tech: [
+        { name: "React", icon: FaReact },
+        { name: "JavaScript", icon: FaJs },
+        { name: "HTML", icon: FaHtml5 },
+        { name: "CSS", icon: FaCss3 },
+      ],
+      features: [t("Gaming Community"), t("Script Marketplace"), t("Roleplay Server")],
+      methodology: t("Agile"),
+      teamSize: t("1 developer"),
+      duration: t("2 months"),
+      impact: t("Gaming community engagement"),
+      icon: FaGamepad,
     },
   ];
 };
