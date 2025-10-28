@@ -7,6 +7,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  images?: string[];
   github?: string;
   demo?: string;
   tech: { name: string; icon: React.ComponentType }[];
@@ -21,9 +22,10 @@ interface Project {
 interface ProjectCardProps {
   project: Project;
   index: number;
+  onProjectClick: (project: Project) => void;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onProjectClick }) => {
   const { t } = useTranslation();
 
   return (
@@ -31,7 +33,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       className="project-card scroll-fade-in bg-white dark:bg-zinc-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-all duration-200 flex flex-col"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="relative h-56 overflow-hidden">
+      <div 
+        className="relative h-56 overflow-hidden cursor-pointer"
+        onClick={() => onProjectClick(project)}
+      >
         <img
           src={project.image}
           alt={project.title}
@@ -69,32 +74,35 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             </span>
           ))}
         </div>
-        <div className="mt-auto flex justify-center items-center pt-4 border-t border-gray-100 dark:border-zinc-700 gap-4">
+        <div className="mt-auto flex justify-center items-center pt-4 border-t border-gray-100 dark:border-zinc-700 gap-2">
+          {/* GitHub Link */}
           {project.github ? (
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-300"
+              className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-300 hover:bg-green-50 dark:hover:bg-green-900/20"
             >
               <FaCode className="w-4 h-4" />
-              <span>{t('Github Repository')}</span>
+              <span>{t('Code')}</span>
             </a>
           ) : (
-            <span className="text-gray-500 dark:text-gray-400">{t('No code available')}</span>
+            <span className="text-gray-500 dark:text-gray-400 text-sm">{t('No code available')}</span>
           )}
+
+          {/* Demo Link */}
           {project.demo ? (
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-300"
+              className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-300 hover:bg-green-50 dark:hover:bg-green-900/20"
             >
               <FaExternalLinkAlt className="w-4 h-4" />
               <span>{t('Live Preview')}</span>
             </a>
           ) : (
-            <span className="text-gray-500 dark:text-gray-400">{t('No demo available')}</span>
+            <span className="text-gray-500 dark:text-gray-400 text-sm">{t('No demo available')}</span>
           )}
         </div>
       </div>

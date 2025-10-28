@@ -105,5 +105,16 @@
   "Your email address": "Tu correo electrónico",
   "Message": "Mensaje",
   "Your message": "Tu mensaje",
-  "Send": "Enviar"
+  "Send": "Enviar",
+  "Details": "Detalles",
+  "Code": "Código",
+  "Description": "Descripción",
+  "Technologies": "Tecnologías",
+  "Features": "Características",
+  "Methodology": "Metodología",
+  "Team Size": "Tamaño del Equipo",
+  "Duration": "Duración",
+  "Impact": "Impacto",
+  "Dark Mode": "Modo Oscuro",
+  "Light Mode": "Modo Claro"
 }

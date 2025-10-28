@@ -105,5 +105,16 @@
   "Your email address": "Your email address",
   "Message": "Message",
   "Your message": "Your message",
-  "Send": "Send"
+  "Send": "Send",
+  "Details": "Details",
+  "Code": "Code",
+  "Description": "Description",
+  "Technologies": "Technologies",
+  "Features": "Features",
+  "Methodology": "Methodology",
+  "Team Size": "Team Size",
+  "Duration": "Duration",
+  "Impact": "Impact",
+  "Dark Mode": "Dark Mode",
+  "Light Mode": "Light Mode"
 }

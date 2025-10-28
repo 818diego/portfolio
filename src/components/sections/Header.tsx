@@ -13,11 +13,19 @@ export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode 
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -38,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode 
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'header-scroll' : 'bg-transparent'
+    <nav className={`fixed w-full z-50 transition-all duration-500 ease-out ${isScrolled ? 'header-scroll' : 'bg-transparent'
       }`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-green-400 transition-all duration-300">
