@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Github, Linkedin, Code2, FileText } from 'lucide-react';
+import { Github, Linkedin, Code2, FileText, Mouse, ChevronDown } from 'lucide-react';
 import { BsTerminalFill } from 'react-icons/bs';
 import { GrCloudSoftware } from 'react-icons/gr';
 import { personalInfo } from '@/data';
@@ -30,6 +30,13 @@ export const Hero: React.FC = () => {
     };
   }, []);
 
+  const scrollToNext = () => {
+    const nextSection = document.querySelector('section:nth-of-type(2)');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const info = personalInfo();
 
   return (
@@ -37,7 +44,7 @@ export const Hero: React.FC = () => {
       ref={sectionRef}
       className="min-h-screen flex items-center justify-center scroll-section-appear"
     >
-      <div className="container mx-auto px-6 py-24 text-center">
+      <div className="container mx-auto px-6 py-24 text-center relative">
         <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-full mb-6 scroll-fade-in">
           <BsTerminalFill className="w-4 h-4 text-green-600 dark:text-green-400" />
           <span className="text-green-600 dark:text-green-400 font-medium">
@@ -98,6 +105,12 @@ export const Hero: React.FC = () => {
           ))}
         </div>
       </div>
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="flex flex-col items-center text-green-600 dark:text-green-400 p-4">
+            <Mouse className="w-8 h-8 animate-bounce text-current mb-1" />
+            <ChevronDown className="w-4 h-4 text-current" />
+          </div>
+        </div>
     </section>
   );
 };

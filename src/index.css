@@ -664,3 +664,23 @@ nav.header-scroll {
     transform: scale(0.95) translateY(-10px);
   }
 }
+
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.scroll-indicator {
+  animation: scrollBounce 2s infinite;
+}
+
+.scroll-indicator:hover {
+  animation-play-state: paused;
+}
