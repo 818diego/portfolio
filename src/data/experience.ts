@@ -6,6 +6,19 @@ export const experiences = () => {
 
   return [
     {
+      title: t("Frontend Developer"),
+      company: "PABS",
+      period: t("July 2025 - Present"),
+      description: t("Development of frontend solutions and user interfaces using Angular, supporting system documentation and API integration."),
+      achievements: [
+        t("Developed and maintained frontend applications using Angular framework"),
+        t("Supported system and module documentation for better project understanding"),
+        t("Resolved technical problems and implemented solutions efficiently"),
+        t("Integrated APIs and third-party services to enhance application functionality"),
+      ],
+      icon: Layout,
+    },
+    {
       title: t("Full Stack Developer"),
       company: "Freelance",
       period: t("January 2024 - Present"),
