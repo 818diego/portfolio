@@ -27,13 +27,13 @@ export const ContactInfo: React.FC = () => {
             return;
         }
         setIsSubmitting(true);
-        const webhookUrl = 'https://discord.com/api/webhooks/1376725432920969298/ByTuW1ouSOaK4vSXFm03QZHU-PjNaJgf8MPL-804Qt73X1CWtr4ymCX3rGdLDYJSzGcT';
+        const webhookUrl = 'https://discord.com/api/webhooks/1432577141836611667/u0JcOXVKUO63uemwNX6Y3s8oecEXl183eXFoUzsjdbbytNgJw_VVsGbqDZCkjY21iwbC';
         const embed = {
-            title: "New Contact Form Submission",
+            title: "Nuevo mensaje de contacto en tu portfolio",
             fields: [
-                { name: "Name", value: sanitizeMessage(name), inline: true },
-                { name: "Email", value: sanitizeMessage(email), inline: true },
-                { name: "Message", value: sanitizeMessage(message) }
+                { name: "Nombre", value: sanitizeMessage(name), inline: true },
+                { name: "Correo electrónico", value: sanitizeMessage(email), inline: true },
+                { name: "Mensaje", value: sanitizeMessage(message) }
             ]
         };
 
