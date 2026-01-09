@@ -66,7 +66,6 @@ export const projects = () => {
         "I developed a comprehensive Discord solution as a personal project, featuring an advanced music player and robust security functionality. I implemented it with Discord.js and Node.js to enhance community engagement and server protection."
       ),
       image: "https://i.imgur.com/qNHkO5e.png",
-      demo: "https://www.supremito.xyz/",
       tech: [
         { name: "Discord.js", icon: FaDiscord },
         { name: "Node.js", icon: FaNodeJs },
@@ -85,7 +84,7 @@ export const projects = () => {
         "I engineered a sophisticated AI application as my final university project, implementing a convolutional neural network capable of identifying over 100 dog breeds. I developed an intuitive web interface allowing users to interact seamlessly with the AI model."
       ),
       image: "https://i.imgur.com/hNL4pj3.png",
-      demo: "https://dogsvision.supremito.xyz/",
+      demo: "https://dogs-predictions-git-main-818supremos-projects.vercel.app/",
       tech: [
         { name: "Python", icon: FaPython },
         { name: "TensorFlow", icon: SiTensorflow },
