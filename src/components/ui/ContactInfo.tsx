@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 export const ContactInfo: React.FC = () => {
     const { t } = useTranslation();
@@ -8,50 +9,47 @@ export const ContactInfo: React.FC = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [showSuccess, setShowSuccess] = useState(false);
+
+    useEffect(() => {
+        emailjs.init('5AlTQBrlZ_OOVm3c5');
+    }, []);
 
     const sanitizeMessage = (text: string): string => {
-        return text
-            .replace(/@everyone/gi, '@\u200beveryone')
-            .replace(/@here/gi, '@\u200bhere')
-            .replace(/\/tts/gi, '/\u200btts')
-            .replace(/\/me/gi, '/\u200bme')
-            .replace(/[`*~_|{}\[\]<>]/g, '')
-            .replace(/['"]/g, '')
-            .replace(/\\/g, '')
-            .replace(/https?:\/\/[^\s]+/gi, '[link removed]');
+        return text.trim();
     };
+
     const handleSubmit = async () => {
         if (!name || !email || !message) {
-            alert(t("Please fill in all fields"));
+            toast.error(t("Please fill in all fields"));
             return;
         }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            toast.error(t("Please enter a valid email"));
+            return;
+        }
+
         setIsSubmitting(true);
-        const webhookUrl = 'https://discord.com/api/webhooks/1432577141836611667/u0JcOXVKUO63uemwNX6Y3s8oecEXl183eXFoUzsjdbbytNgJw_VVsGbqDZCkjY21iwbC';
-        const embed = {
-            title: "Nuevo mensaje de contacto en tu portfolio",
-            fields: [
-                { name: "Nombre", value: sanitizeMessage(name), inline: true },
-                { name: "Correo electrónico", value: sanitizeMessage(email), inline: true },
-                { name: "Mensaje", value: sanitizeMessage(message) }
-            ]
-        };
 
         try {
-            await axios.post(webhookUrl, {
-                embeds: [embed],
-                tts: false,
-            });
+            await emailjs.send(
+                'service_zttnv8l',      // Service ID
+                'template_kkxvyrj',     // Template ID
+                {
+                    from_name: sanitizeMessage(name),
+                    from_email: email,
+                    message: sanitizeMessage(message),
+                    to_email: 'diego.fmerinoh@gmail.com'
+                }
+            );
             setName('');
             setEmail('');
             setMessage('');
-            setShowSuccess(true);
-            setTimeout(() => {
-                setShowSuccess(false);
-            }, 3000);
+            toast.success(t("Message sent successfully!"));
         } catch (error) {
-            console.error("Error sending message to Discord", error);
-            alert(t("Failed to send message. Please try again later."));
+            console.error("Error sending message", error);
+            toast.error(t("Failed to send message. Please try again later."));
         } finally {
             setIsSubmitting(false);
         }
@@ -65,16 +63,7 @@ export const ContactInfo: React.FC = () => {
             </div>
             <div className="hidden md:block border-l border-gray-300 dark:border-zinc-700"></div>
             <div className="p-6 w-full md:w-1/2 relative">
-                <h3 className="text-2xl font-bold text-green-600 dark:text-green-400">{t("Send me a message")}</h3>                <div className={`fixed inset-0 flex items-center justify-center z-10 pointer-events-none ${showSuccess ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200`}>
-                    <div className="bg-green-100 dark:bg-green-900 border-2 border-green-500 rounded-lg p-4 shadow-lg max-w-xs w-full mx-4">
-                        <div className="flex items-center">
-                            <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <p className="text-green-700 dark:text-green-300 font-medium">{t("Message sent successfully!")}</p>
-                        </div>
-                    </div>
-                </div>
+                <h3 className="text-2xl font-bold text-green-600 dark:text-green-400">{t("Send me a message")}</h3>
                 <form className="mt-4">
                     <div className="mb-4">
                         <label className="flex text-green-600 dark:text-green-400 text-[15px] font-bold mb-2" htmlFor="name">

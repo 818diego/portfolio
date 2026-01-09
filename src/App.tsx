@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 import './i18n';
 import { Header } from './components/sections/Header';
 import { Hero } from './components/sections/Hero';
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className={`${darkMode ? 'dark bg-zinc-900' : 'bg-gray-100'} min-h-screen transition-colors duration-300`}>
+      <Toaster position="top-center" />
       <ScrollProgress />
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
