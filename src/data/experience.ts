@@ -18,18 +18,18 @@ export const experiences = () => {
       ],
       icon: Layout,
     },
-    {
-      title: t("Full Stack Developer"),
-      company: "Freelance",
-      period: t("January 2024 - Present"),
-      description: t("Development of web and mobile solutions for clients from various industries, from conceptualization to delivery."),
-      achievements: [
-        t("Collaborated with clients on projects of different sizes, adapting to their specific needs"),
-        t("Optimized the performance of delivered applications, improving load times"),
-        t("Established trust relationships with clients by meeting deadlines and maintaining high quality standards"),
-      ],
-      icon: Code2,
-    },
+    // {
+    //   title: t("Full Stack Developer"),
+    //   company: "Freelance",
+    //   period: t("January 2024 - Present"),
+    //   description: t("Development of web and mobile solutions for clients from various industries, from conceptualization to delivery."),
+    //   achievements: [
+    //     t("Collaborated with clients on projects of different sizes, adapting to their specific needs"),
+    //     t("Optimized the performance of delivered applications, improving load times"),
+    //     t("Established trust relationships with clients by meeting deadlines and maintaining high quality standards"),
+    //   ],
+    //   icon: Code2,
+    // },
     {
       title: t("Intern"),
       company: "PT DILATO INFORMATION TECHNOLOGY",
