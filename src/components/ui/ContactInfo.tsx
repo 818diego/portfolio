@@ -11,7 +11,7 @@ export const ContactInfo: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
-        emailjs.init('5AlTQBrlZ_OOVm3c5');
+        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
     }, []);
 
     const sanitizeMessage = (text: string): string => {
@@ -34,8 +34,8 @@ export const ContactInfo: React.FC = () => {
 
         try {
             await emailjs.send(
-                'service_zttnv8l',      // Service ID
-                'template_kkxvyrj',     // Template ID
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 {
                     from_name: sanitizeMessage(name),
                     from_email: email,
