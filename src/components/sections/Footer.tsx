@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
-            © 2024 <a href={info.social.github} target="_blank" rel="noopener noreferrer" className="text-green-500 font-bold hover:text-green-700 transition-all">818diego</a>. {t('All rights reserved')}.
+            © {new Date().getFullYear()} <a href={info.social.github} target="_blank" rel="noopener noreferrer" className="text-green-500 font-bold hover:text-green-700 transition-all">818diego</a>. {t('All rights reserved')}.
           </p>
           <div className="flex space-x-4">
             {[

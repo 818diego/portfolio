@@ -12,7 +12,7 @@ interface Project {
   demo?: string;
   tech: { name: string; icon: React.ComponentType }[];
   features: string[];
-  methodology: string;
+  methodology?: string;
   teamSize: string;
   duration: string;
   impact: string;
@@ -90,16 +90,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
   };
 
   return (
-    <div 
-      className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 modal-backdrop ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}
+    <div
+      className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 modal-backdrop ${isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
       onClick={handleBackdropClick}
     >
-      <div 
-        className={`bg-white dark:bg-zinc-800 rounded-lg max-w-7xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar modal-content mx-4 ${
-          isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
-        }`}
+      <div
+        className={`bg-white dark:bg-zinc-800 rounded-lg max-w-7xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar modal-content mx-4 ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+          }`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-zinc-700">
@@ -119,9 +117,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
               <img
                 src={images[currentImageIndex]}
                 alt={project.title}
-                className={`max-w-full max-h-full object-contain transition-all duration-300 ${
-                  isImageChanging ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
-                }`}
+                className={`max-w-full max-h-full object-contain transition-all duration-300 ${isImageChanging ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+                  }`}
               />
               {images.length > 1 && (
                 <>
@@ -148,11 +145,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
                       key={index}
                       onClick={() => goToImage(index)}
                       disabled={isImageChanging}
-                      className={`w-3 h-3 rounded-full transition-all disabled:cursor-not-allowed ${
-                        index === currentImageIndex
-                          ? 'bg-white'
-                          : 'bg-white bg-opacity-50'
-                      }`}
+                      className={`w-3 h-3 rounded-full transition-all disabled:cursor-not-allowed ${index === currentImageIndex
+                        ? 'bg-white'
+                        : 'bg-white bg-opacity-50'
+                        }`}
                     />
                   ))}
                 </div>
@@ -197,12 +193,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-gray-50 dark:bg-zinc-700 p-4 rounded-lg">
-                <h4 className="font-semibold text-gray-800 dark:text-green-300 mb-2">
-                  {t('Methodology')}
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400">{project.methodology}</p>
-              </div>
+              {project.methodology && (
+                <div className="bg-gray-50 dark:bg-zinc-700 p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-800 dark:text-green-300 mb-2">
+                    {t('Methodology')}
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">{project.methodology}</p>
+                </div>
+              )}
               <div className="bg-gray-50 dark:bg-zinc-700 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-800 dark:text-green-300 mb-2">
                   {t('Team Size')}
