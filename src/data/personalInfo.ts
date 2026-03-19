@@ -12,7 +12,7 @@ export const personalInfo = () => {
     social: {
       github: "https://github.com/818diego",
       linkedin: "https://www.linkedin.com/in/818diego/",
-      cv: "DiegoMerinoCV.pdf"
+      cv: "CV_DiegoMerino.pdf"
     }
   };
 };
