@@ -94,11 +94,11 @@ export const Hero: React.FC = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative p-3 rounded-full bg-white dark:bg-zinc-800 shadow-md hover:shadow-lg transition-all button-hover ${social.color} scroll-fade-in`}
+              className={`group flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-zinc-800 hover:shadow-lg transition-all button-hover ${social.color} scroll-fade-in`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <social.icon className="w-6 h-6 text-gray-600 dark:text-gray-400 transition-colors group-hover:text-green-600 dark:group-hover:text-green-400" />
-              <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-sm text-gray-600 dark:text-gray-400">
+              <social.icon className="w-5 h-5 text-gray-600 dark:text-gray-400 transition-colors group-hover:text-green-600 dark:group-hover:text-green-400" />
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-green-600 dark:group-hover:text-green-400">
                 {social.label}
               </span>
             </a>
