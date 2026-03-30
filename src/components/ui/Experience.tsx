@@ -18,10 +18,8 @@ export const Experience: React.FC = () => {
       },
       { threshold: 0.1 }
     );
-
     const timelineItems = document.querySelectorAll('.timeline-item');
     timelineItems.forEach((item) => observer.observe(item));
-
     return () => {
       timelineItems.forEach((item) => observer.unobserve(item));
     };
@@ -35,10 +33,13 @@ export const Experience: React.FC = () => {
           <Award className="w-8 h-8 text-green-500 dark:text-green-400 mt-1" />
           {t('Experience')}
         </h2>
-        <div className="max-w-4xl mx-auto">
-          {experiences().map((exp, index) => (
-            <ExperienceItem key={index} exp={exp} index={index} />
-          ))}
+        <div className="max-w-5xl mx-auto relative px-6 md:px-0">
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-500 via-green-400 to-transparent -translate-x-1/2" />
+          <div className="space-y-4">
+            {experiences().map((exp, index) => (
+              <ExperienceItem key={index} exp={exp} index={index} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
