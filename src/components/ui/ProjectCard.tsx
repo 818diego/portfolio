@@ -12,7 +12,7 @@ interface Project {
   demo?: string;
   tech: { name: string; icon: React.ComponentType }[];
   features: string[];
-  methodology: string;
+  methodology?: string;
   teamSize: string;
   duration: string;
   impact: string;
@@ -22,10 +22,9 @@ interface Project {
 interface ProjectCardProps {
   project: Project;
   index: number;
-  onProjectClick: (project: Project) => void;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onProjectClick }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const { t } = useTranslation();
 
   return (
@@ -34,8 +33,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onProj
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div 
-        className="relative h-56 overflow-hidden cursor-pointer"
-        onClick={() => onProjectClick(project)}
+        className="relative h-56 overflow-hidden"
       >
         <img
           src={project.image}

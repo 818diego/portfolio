@@ -1,40 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { FaProjectDiagram } from 'react-icons/fa';
 import { projects } from '@/data';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from '@/components/ui/ProjectCard';
-import { ProjectModal } from '@/components/ui/ProjectModal';
-
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  images?: string[];
-  github?: string;
-  demo?: string;
-  tech: { name: string; icon: React.ComponentType }[];
-  features: string[];
-  methodology: string;
-  teamSize: string;
-  duration: string;
-  impact: string;
-  icon: React.ComponentType;
-}
 
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedProject(null);
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,23 +36,15 @@ export const Projects: React.FC = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects().map((project: Project, index) => (
+          {projects().map((project, index) => (
             <ProjectCard 
               key={index} 
               project={project} 
               index={index}
-              onProjectClick={handleProjectClick}
             />
           ))}
         </div>
       </div>
-
-      {/* Project Modal */}
-      <ProjectModal
-        project={selectedProject}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
     </section>
   );
 };
