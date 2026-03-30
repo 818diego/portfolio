@@ -1,4 +1,4 @@
-import { FaGlobe, FaMobileAlt, FaServer, FaRobot, FaBrain, FaReact, FaPhp, FaBootstrap, FaDiscord, FaNodeJs, FaPython, FaHtml5, FaFigma, FaGamepad } from "react-icons/fa";
+import { FaGlobe, FaMobileAlt, FaServer, FaBrain, FaReact, FaPhp, FaBootstrap, FaPython, FaHtml5, FaFigma, FaGamepad } from "react-icons/fa";
 import { FaCss3, FaJs, FaLaravel } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTensorflow, SiTypescript } from "react-icons/si";
@@ -57,23 +57,6 @@ export const projects = () => {
       duration: t("2 months"),
       impact: t("System efficiency improvement"),
       icon: FaServer,
-    },
-    {
-      title: t("Supremo Team Website"),
-      description: t(
-        "I developed a comprehensive Discord solution as a personal project, featuring an advanced music player and robust security functionality. I implemented it with Discord.js and Node.js to enhance community engagement and server protection."
-      ),
-      image: "https://i.imgur.com/qNHkO5e.png",
-      tech: [
-        { name: "Discord.js", icon: FaDiscord },
-        { name: "Node.js", icon: FaNodeJs },
-        { name: "JavaScript", icon: FaJs },
-      ],
-      features: [t("Music Bot"), t("Server Security"), t("Automation")],
-      teamSize: t("1 developer"),
-      duration: t("1 month"),
-      impact: t("Community management improvement"),
-      icon: FaRobot,
     },
     {
       title: t("Dog Breed Prediction Web App"),
