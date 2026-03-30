@@ -9,16 +9,16 @@ export const ExperienceItem: React.FC<{ exp: any, index: number }> = ({ exp, ind
             style={{ animationDelay: `${index * 0.2}s` }}
         >
             <div className="hidden md:block w-1/2 pointer-events-none" />
-            <div className="absolute left-6 md:left-1/2 top-1/2 md:top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+            <div className="absolute left-4 md:left-1/2 top-0 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 pointer-events-none">
                 <div className="relative">
                     <div 
-                        className="relative p-2.5 bg-white dark:bg-zinc-800 rounded-full border-2 border-green-500 dark:border-green-400 shadow-lg"
+                        className="relative p-2 md:p-2.5 bg-white dark:bg-zinc-800 rounded-full border-2 border-green-500 dark:border-green-400 shadow-lg"
                     >
-                        <exp.icon className="w-5 h-5 text-green-500 dark:text-green-400" />
+                        <exp.icon className="w-4 h-4 md:w-5 md:h-5 text-green-500 dark:text-green-400" />
                     </div>
                 </div>
             </div>
-            <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
+            <div className={`w-full md:w-1/2 pl-10 md:pl-0 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
                 <div 
                     className="group bg-white dark:bg-zinc-800 rounded-xl p-5 shadow-sm dark:shadow-zinc-900 border border-gray-100 dark:border-zinc-700/50 hover:border-green-500/30 dark:hover:border-green-400/30 transition-all duration-300"
                 >
