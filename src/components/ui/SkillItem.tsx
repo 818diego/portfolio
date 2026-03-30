@@ -3,14 +3,14 @@ import { Skill } from '../../data/skills';
 
 const SkillItem: React.FC<{ skill: Skill; index: number; skillIndex: number }> = ({ skill, index, skillIndex }) => (
     <div
-        className="scroll-fade-in bg-gray-50 dark:bg-zinc-700 rounded-[4px] p-4 transition-all hover:shadow-md hover:bg-white dark:hover:bg-zinc-600 flex items-center"
+        className="scroll-fade-in bg-white/5 dark:bg-white/5 border border-white/10 rounded-lg p-2.5 transition-all duration-300 hover:border-green-500/30 flex items-center group"
         style={{ animationDelay: `${(index * 4 + skillIndex) * 0.2}s` }}
     >
-        <div className="flex items-center gap-3">
-            <div className="p-2 bg-gray-100 dark:bg-zinc-800 rounded-[4px]">
-                <skill.icon className="w-6 h-6 text-green-500 dark:text-green-400" />
+        <div className="flex items-center gap-2.5">
+            <div className="p-1.5 bg-zinc-100 dark:bg-zinc-800/50 rounded-lg border border-white/5 group-hover:border-green-500/20 transition-colors">
+                <skill.icon className="w-5 h-5 text-green-500 dark:text-green-400" />
             </div>
-            <span className="text-gray-700 dark:text-gray-300 font-medium">
+            <span className="text-[12px] text-gray-700 dark:text-zinc-100/90 font-medium group-hover:text-white transition-colors line-clamp-1">
                 {skill.name}
             </span>
         </div>
