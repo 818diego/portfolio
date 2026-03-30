@@ -61,7 +61,6 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Enhanced Base Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -74,7 +73,6 @@
   }
 }
 
-/* New Scroll Animations */
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -220,7 +218,6 @@
   }
 }
 
-/* Enhanced Scroll Animations */
 .scroll-fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -276,7 +273,6 @@
   transform: translate(0) scale(1);
 }
 
-/* New Scroll Data Attributes */
 [data-scroll="fade-out"] {
   transform: translateY(0);
 }
@@ -294,7 +290,24 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Smooth border transition */
+.project-card {
+  position: relative;
+}
+
+.description-text {
+  display: block;
+  overflow: hidden;
+  max-height: 4.5rem;
+  opacity: 0.8;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .description-text,
+.group:hover .description-text {
+  max-height: 1000px;
+  opacity: 1;
+}
+
 nav {
   border-bottom: 1px solid transparent;
   transition: border-bottom-color 0.5s ease-out;
@@ -304,7 +317,6 @@ nav.header-scroll {
   border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Enhanced Project Card Animations */
 .project-card {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards;
@@ -312,7 +324,7 @@ nav.header-scroll {
 }
 
 .project-card:hover {
-  transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
@@ -339,7 +351,6 @@ nav.header-scroll {
   opacity: 1;
 }
 
-/* Enhanced Skill Progress Animation */
 .skill-progress-bar {
   position: relative;
   height: 8px;
@@ -373,7 +384,6 @@ nav.header-scroll {
       theme("colors.green.300"));
 }
 
-/* Enhanced Timeline Animation */
 .timeline-item {
   opacity: 0;
   transform: translateX(-20px);
@@ -400,7 +410,6 @@ nav.header-scroll {
   animation-play-state: running;
 }
 
-/* Enhanced Button Animations */
 .button-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, filter;
@@ -411,7 +420,6 @@ nav.header-scroll {
   filter: brightness(1.1) contrast(1.1);
 }
 
-/* Enhanced Social Icons Animation */
 .social-icon {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
@@ -423,18 +431,7 @@ nav.header-scroll {
     floatAnimation 2s ease-in-out infinite;
 }
 
-/* Enhanced Language Switcher Animation */
 .lang-switch {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-
-.lang-switch:hover {
-  transform: rotate(10deg) scale(1.1);
-}
-
-/* Enhanced Section Transitions */
-.section-enter {
   opacity: 0;
   transform: translateY(20px);
   filter: blur(5px);
@@ -460,7 +457,6 @@ nav.header-scroll {
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced Scroll Progress Bar */
 .scroll-progress {
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-size: 200% 100%;
@@ -468,12 +464,10 @@ nav.header-scroll {
   will-change: width;
 }
 
-/* Floating Elements */
 .float {
   animation: floatAnimation 3s ease-in-out infinite;
 }
 
-/* Shimmer Effect */
 .shimmer {
   background: linear-gradient(90deg,
       rgba(255, 255, 255, 0) 0%,

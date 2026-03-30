@@ -41,7 +41,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          {React.createElement(project.icon, { className: "w-12 h-12 text-white transform -translate-y-10 group-hover:translate-y-0 transition-transform duration-500" } as any)} {/* Dynamic icon */}
+          {React.createElement(project.icon, { className: "w-12 h-12 text-white transform -translate-y-10 group-hover:translate-y-0 transition-transform duration-500" } as any)}
         </div>
       </div>
 
@@ -49,10 +49,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-green-300">
           {project.title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-4">
+        <p className="description-text text-gray-600 dark:text-gray-400 mb-4">
           {project.description}
         </p>
-
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.map((tech, i) => (
             <Badge key={i} variant="default" icon={<tech.icon />}>
@@ -73,7 +72,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           ))}
         </div>
         <div className="mt-auto flex justify-center items-center pt-4 border-t border-gray-100 dark:border-zinc-700 gap-2">
-          {/* GitHub Link */}
           {project.github ? (
             <a
               href={project.github}
@@ -87,8 +85,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           ) : (
             <span className="text-gray-500 dark:text-gray-400 text-sm">{t('No code available')}</span>
           )}
-
-          {/* Demo Link */}
           {project.demo ? (
             <a
               href={project.demo}

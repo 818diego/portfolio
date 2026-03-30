@@ -10,7 +10,7 @@ export const ExperienceItem: React.FC<{ exp: any, index: number }> = ({ exp, ind
             <div className="absolute -left-[21px] top-0 p-2 bg-white dark:bg-zinc-800 rounded-full border-2 border-green-500 dark:border-green-400 timeline-dot">
                 <exp.icon className="w-6 h-6 text-green-500 dark:text-green-400" />
             </div>
-            <div className="bg-white dark:bg-zinc-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all">
+            <div className="bg-white dark:bg-zinc-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all group">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                     <div>
                         <h3 className="text-xl font-bold text-gray-800 dark:text-green-300">
@@ -25,7 +25,7 @@ export const ExperienceItem: React.FC<{ exp: any, index: number }> = ({ exp, ind
                         </div>
                     </div>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <p className="description-text text-gray-700 dark:text-gray-300 mb-4">
                     {exp.description}
                 </p>
                 <ul className="space-y-2">
