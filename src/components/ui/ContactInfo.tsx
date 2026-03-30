@@ -70,7 +70,7 @@ export const ContactInfo: React.FC = () => {
                             {t("Name")}
                         </label>
                         <input
-                            className="rounded w-full py-2 px-3 bg-gray-300 dark:bg-neutral-900 text-gray-700 dark:text-gray-300 focus:outline-none"
+                            className="rounded w-full py-2 px-3 bg-gray-300 dark:bg-neutral-900 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
                             id="name"
                             type="text"
                             placeholder={t("Your name")}
@@ -84,7 +84,7 @@ export const ContactInfo: React.FC = () => {
                             {t("Email Address")}
                         </label>
                         <input
-                            className="rounded w-full py-2 px-3 bg-gray-300 dark:bg-neutral-900 text-gray-700 dark:text-gray-300 focus:outline-none"
+                            className="rounded w-full py-2 px-3 bg-gray-300 dark:bg-neutral-900 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
                             id="email"
                             type="email"
                             placeholder={t("Your email address")}
@@ -98,7 +98,7 @@ export const ContactInfo: React.FC = () => {
                             {t("Message")}
                         </label>
                         <textarea
-                            className="rounded w-full py-2 px-3 bg-gray-300 dark:bg-neutral-900 text-gray-700 dark:text-gray-300 focus:outline-none"
+                            className="rounded w-full py-2 px-3 bg-gray-300 dark:bg-neutral-900 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
                             id="message"
                             placeholder={t("Your message")}
                             value={message}
