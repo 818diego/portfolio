@@ -59,8 +59,8 @@ export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode 
         <div className="flex items-center space-x-4">
           <button
             onClick={handleToggleDarkMode}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 flex items-center"
-            aria-label="Toggle theme"
+            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 flex items-center focus-visible:ring-emerald-500"
+            aria-label={darkMode ? t('Switch to light mode') : t('Switch to dark mode')}
           >
             {darkMode ? (
               <>
@@ -76,8 +76,8 @@ export const Header: React.FC<HeaderProps> = ({ darkMode = true, toggleDarkMode 
           </button>
           <button
             onClick={() => changeLanguage(i18n.language === 'en' ? 'es' : 'en')}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 flex items-center"
-            aria-label="Toggle language"
+            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-green-900/30 transition-all duration-300 flex items-center focus-visible:ring-emerald-500"
+            aria-label={i18n.language === 'en' ? t('Change to Spanish') : t('Change to English')}
           >
             <IoLanguageOutline className="text-gray-800 dark:text-green-400 w-6 h-6" />
             <span className="ml-2 text-gray-800 dark:text-green-400">

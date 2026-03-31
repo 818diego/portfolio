@@ -36,6 +36,16 @@
     transform: scale(1.1);
   }
 
+  /* Accessibility: Focus Indicators */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-emerald-500 ring-offset-2 ring-offset-white dark:ring-offset-zinc-900;
+  }
+
+  /* Accessibility: Skip Navigation Link */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-emerald-500 focus:text-white focus:rounded-md focus:font-bold;
+  }
+
   .dark * {
     scrollbar-color: #10b981 #1c1c1c;
   }

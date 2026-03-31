@@ -18,14 +18,19 @@ function App() {
 
   return (
     <div className={`${darkMode ? 'dark bg-zinc-900' : 'bg-gray-100'} min-h-screen transition-colors duration-300`}>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Toaster position="top-center" />
       <ScrollProgress />
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Hero />
-      <Experience />
-      <Projects />
-      <Skills />
-      <ContactSection />
+      <main id="main-content">
+        <Hero />
+        <Experience />
+        <Projects />
+        <Skills />
+        <ContactSection />
+      </main>
       <Footer />
       <ScrollToTopButton />
     </div>
