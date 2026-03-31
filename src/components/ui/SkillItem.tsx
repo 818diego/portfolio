@@ -10,7 +10,7 @@ const SkillItem: React.FC<{ skill: Skill; index: number; skillIndex: number }> =
             <div className="p-1.5 bg-zinc-100 dark:bg-zinc-800/50 rounded-lg border border-white/5 group-hover:border-green-500/20 transition-colors">
                 <skill.icon className="w-5 h-5 text-green-500 dark:text-green-400" />
             </div>
-            <span className="text-[12px] text-gray-700 dark:text-zinc-100/90 font-medium group-hover:text-white transition-colors line-clamp-1">
+            <span className="text-[16px] text-gray-700 dark:text-zinc-100/90 font-medium group-hover:text-white transition-colors line-clamp-1">
                 {skill.name}
             </span>
         </div>
