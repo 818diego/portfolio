@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { experiences } from '@/data';
-import { Award } from 'lucide-react';
+import { FaAward } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { ExperienceItem } from '../sections/ExperienceItem';
 
@@ -29,8 +29,8 @@ export const Experience: React.FC = () => {
     <section className="py-20 relative">
       <div className="absolute left-0 top-0 w-1 h-full" />
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 scroll-fade-in flex items-center justify-center gap-2">
-          <Award className="w-8 h-8 text-green-500 dark:text-green-400 mt-1" />
+        <h2 className="text-3xl font-bold mb-12 text-center text-green-400 scroll-fade-in flex items-center justify-center gap-2">
+          <FaAward className="w-8 h-8 text-green-400 mt-1" />
           {t('Experience')}
         </h2>
         <div className="max-w-5xl mx-auto relative">

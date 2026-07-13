@@ -1,4 +1,4 @@
-import { Code2, Layout, Server } from "lucide-react";
+import { FaCode, FaThLarge, FaServer } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 export const experiences = () => {
@@ -16,7 +16,7 @@ export const experiences = () => {
         t("Resolved technical problems and implemented solutions efficiently"),
         t("Integrated APIs and third-party services to enhance application functionality"),
       ],
-      icon: Code2,
+      icon: FaCode,
     },
     {
       title: t("Practicas Profesionales Software Engineer"),
@@ -28,7 +28,7 @@ export const experiences = () => {
         t("Collaborated with the QA team to ensure system quality and efficiently resolve bugs"),
         t("Contributed to the redesign of the system to make it more scalable and efficient"),
       ],
-      icon: Layout,
+      icon: FaThLarge,
     },
     {
       title: t("Full Stack Developer"),
@@ -40,7 +40,7 @@ export const experiences = () => {
         t("Improved system stability and performance, ensuring its proper operation in the production environment"),
         t("Worked in a team to implement new features and resolve technical issues"),
       ],
-      icon: Server,
+      icon: FaServer,
     },
   ];
 };

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import './i18n';
 import { Header } from './components/sections/Header';
@@ -12,18 +11,14 @@ import { ScrollProgress } from './components/ui/ScrollProgress';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-
   return (
-    <div className={`${darkMode ? 'dark bg-zinc-900' : 'bg-gray-100'} min-h-screen transition-colors duration-300`}>
+    <div className="dark bg-zinc-900 min-h-screen transition-colors duration-300">
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
       <Toaster position="top-center" />
       <ScrollProgress />
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Header />
       <main id="main-content">
         <Hero />
         <Experience />

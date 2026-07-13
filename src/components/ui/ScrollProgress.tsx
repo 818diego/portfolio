@@ -16,9 +16,9 @@ export const ScrollProgress: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 dark:bg-zinc-800 z-[60]">
-      <div 
-        className="h-full bg-gradient-to-r from-green-500 to-green-400 dark:from-green-400 dark:to-green-300"
+    <div className="fixed top-0 left-0 w-full h-1 bg-zinc-800 z-[60]">
+      <div
+        className="h-full bg-gradient-to-r from-green-400 to-green-300"
         style={{ width: `${scrollProgress}%` }}
       />
     </div>

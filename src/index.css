@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   html {
@@ -38,33 +36,13 @@
 
   /* Accessibility: Focus Indicators */
   *:focus-visible {
-    @apply outline-none ring-2 ring-emerald-500 ring-offset-2 ring-offset-white dark:ring-offset-zinc-900;
+    @apply outline-none ring-2 ring-emerald-500 ring-offset-2 ring-offset-zinc-900;
   }
 
   /* Accessibility: Skip Navigation Link */
   .skip-link {
     @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-emerald-500 focus:text-white focus:rounded-md focus:font-bold;
   }
-
-  .dark * {
-    scrollbar-color: #10b981 #1c1c1c;
-  }
-
-  .dark *::-webkit-scrollbar-track {
-    background: #374151;
-  }
-
-  .dark *::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #10b981, #059669);
-  }
-
-  .dark *::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #059669, #047857);
-  }
-}
-
-.dark {
-  color-scheme: dark;
 }
 
 .animate-fade-in {
@@ -312,13 +290,9 @@ nav.header-scroll {
 .skill-progress-bar {
   position: relative;
   height: 8px;
-  background: theme("colors.gray.200");
+  background: theme("colors.zinc.700");
   border-radius: 4px;
   overflow: hidden;
-}
-
-.dark .skill-progress-bar {
-  background: theme("colors.zinc.700");
 }
 
 .skill-progress-fill {
@@ -327,19 +301,13 @@ nav.header-scroll {
   left: 0;
   height: 100%;
   background: linear-gradient(90deg,
-      theme("colors.green.500"),
-      theme("colors.green.400"));
+      theme("colors.green.400"),
+      theme("colors.green.300"));
   transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
   animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1) backwards,
     shimmer 2.5s infinite linear;
   background-size: 200% 100%;
   will-change: width, transform;
-}
-
-.dark .skill-progress-fill {
-  background: linear-gradient(90deg,
-      theme("colors.green.400"),
-      theme("colors.green.300"));
 }
 
 .timeline-item {
@@ -429,25 +397,10 @@ nav.header-scroll {
 .shimmer {
   background: linear-gradient(90deg,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.1) 50%,
       rgba(255, 255, 255, 0) 100%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite linear;
-}
-
-.dark .shimmer {
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.1) 50%,
-      rgba(255, 255, 255, 0) 100%);
-}
-
-.light-mode-img {
-  filter: invert(100%);
-}
-
-.dark-mode-img {
-  filter: invert(0%);
 }
 
 @keyframes fadeIn {
@@ -484,7 +437,7 @@ nav.header-scroll {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #10b981 #f3f4f6;
+  scrollbar-color: #10b981 #374151;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -492,7 +445,7 @@ nav.header-scroll {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: #374151;
   border-radius: 4px;
 }
 
@@ -505,22 +458,6 @@ nav.header-scroll {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #059669, #047857);
   transform: scale(1.1);
-}
-
-.dark .custom-scrollbar {
-  scrollbar-color: #10b981 #374151;
-}
-
-.dark .custom-scrollbar::-webkit-scrollbar-track {
-  background: #374151;
-}
-
-.dark .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #10b981, #059669);
-}
-
-.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #059669, #047857);
 }
 
 /* Modal Animations */

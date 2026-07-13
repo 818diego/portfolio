@@ -36,10 +36,10 @@ export const Skills: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-100 dark:bg-zinc-900">
+    <section ref={sectionRef} className="py-20 bg-zinc-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-10 text-center text-gray-800 dark:text-green-400 scroll-fade-in">
-          <FaTools className="inline-block w-7 h-7 mr-2 text-green-500 dark:text-green-400 mb-1" />
+        <h2 className="text-3xl font-bold mb-10 text-center text-green-400 scroll-fade-in">
+          <FaTools className="inline-block w-7 h-7 mr-2 text-green-400 mb-1" />
           {t('Skills')}
         </h2>
 

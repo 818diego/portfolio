@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
-import { Clock, Languages, Globe } from 'lucide-react';
+import { FaClock, FaLanguage, FaGlobe } from 'react-icons/fa';
 
 export const ContactInfo: React.FC = () => {
     const { t } = useTranslation();
@@ -57,61 +57,61 @@ export const ContactInfo: React.FC = () => {
     };
 
     return (
-        <div className="max-w-full mx-auto bg-white dark:bg-zinc-800 rounded-xl shadow-sm border border-gray-100 dark:border-zinc-700/50 overflow-hidden flex flex-col md:flex-row transition-all duration-300">
-            <div className="flex flex-col justify-center p-8 w-full md:w-1/2 bg-zinc-50/50 dark:bg-zinc-900/20">
-                <h3 className="text-2xl font-black text-gray-800 dark:text-white leading-tight">
+        <div className="max-w-full mx-auto bg-zinc-800 rounded-xl shadow-sm border border-zinc-700/50 overflow-hidden flex flex-col md:flex-row transition-all duration-300">
+            <div className="flex flex-col justify-center p-8 w-full md:w-1/2 bg-zinc-900/20">
+                <h3 className="text-2xl font-black text-white leading-tight">
                     {t("I'd love to hear from you!")}
                 </h3>
-                <p className="mt-4 text-gray-600 dark:text-gray-400 text-[15px] leading-relaxed">
+                <p className="mt-4 text-gray-400 text-[15px] leading-relaxed">
                     {t("If you have any questions or want to discuss a project, feel free to contact me.")}
                 </p>
                 <div className="mt-8 space-y-4">
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-green-50/50 dark:bg-green-500/5 border border-green-100 dark:border-green-500/20">
+                    <div className="flex items-center gap-3 p-3 rounded-lg bg-green-500/5 border border-green-500/20">
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-                        <span className="text-sm font-medium text-green-700 dark:text-green-400 font-bold uppercase tracking-wide">
+                        <span className="text-sm font-medium text-green-400 font-bold uppercase tracking-wide">
                             {t("Available for new projects")}
                         </span>
                     </div>
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-blue-50/30 dark:bg-blue-500/5 border border-blue-100/50 dark:border-blue-500/10 transition-colors">
+                    <div className="flex items-center justify-between p-4 rounded-xl bg-blue-500/5 border border-blue-500/10 transition-colors">
                         <div className="flex items-center gap-4">
-                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center">
-                                <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                                <FaClock className="w-5 h-5 text-blue-400" />
                             </div>
-                            <span className="text-[12px] font-bold text-blue-600/70 dark:text-blue-400/70 uppercase tracking-widest">{t("Response Time")}</span>
+                            <span className="text-[12px] font-bold text-blue-400/70 uppercase tracking-widest">{t("Response Time")}</span>
                         </div>
-                        <span className="text-sm text-gray-700 dark:text-zinc-300 font-bold">24/72 hrs</span>
+                        <span className="text-sm text-zinc-300 font-bold">24/72 hrs</span>
                     </div>
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-orange-50/30 dark:bg-orange-500/5 border border-orange-100/50 dark:border-orange-500/10 transition-colors">
+                    <div className="flex items-center justify-between p-4 rounded-xl bg-orange-500/5 border border-orange-500/10 transition-colors">
                         <div className="flex items-center gap-4">
-                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center">
-                                <Languages className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                                <FaLanguage className="w-5 h-5 text-orange-400" />
                             </div>
-                            <span className="text-[12px] font-bold text-orange-600/70 dark:text-orange-400/70 uppercase tracking-widest">{t("Languages")}</span>
+                            <span className="text-[12px] font-bold text-orange-400/70 uppercase tracking-widest">{t("Languages")}</span>
                         </div>
-                        <span className="text-sm text-gray-700 dark:text-zinc-300 font-bold">{t("Spanish & English")}</span>
+                        <span className="text-sm text-zinc-300 font-bold">{t("Spanish & English")}</span>
                     </div>
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-zinc-50/30 dark:bg-zinc-500/5 border border-zinc-200/50 dark:border-zinc-500/10 transition-colors">
+                    <div className="flex items-center justify-between p-4 rounded-xl bg-zinc-500/5 border border-zinc-500/10 transition-colors">
                         <div className="flex items-center gap-4">
-                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-zinc-100 dark:bg-zinc-500/20 flex items-center justify-center">
-                                <Globe className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-zinc-500/20 flex items-center justify-center">
+                                <FaGlobe className="w-5 h-5 text-zinc-400" />
                             </div>
-                            <span className="text-[12px] font-bold text-zinc-600/70 dark:text-zinc-400/70 uppercase tracking-widest">{t("Timezone")}</span>
+                            <span className="text-[12px] font-bold text-zinc-400/70 uppercase tracking-widest">{t("Timezone")}</span>
                         </div>
-                        <span className="text-sm text-gray-700 dark:text-zinc-300 font-bold">UTC -6</span>
+                        <span className="text-sm text-zinc-300 font-bold">UTC -6</span>
                     </div>
                 </div>
             </div>
             <div className="p-8 w-full md:w-1/2 relative">
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-6">
+                <h3 className="text-xl font-bold text-white mb-6">
                     {t("Send me a message")}
                 </h3>
                 <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
                     <div>
-                        <label className="block text-[13px] font-bold text-green-600 dark:text-green-400 uppercase tracking-wider mb-2" htmlFor="name">
+                        <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="name">
                             {t("Name")}
                         </label>
                         <input
-                            className="w-full py-2.5 px-4 bg-gray-50 dark:bg-zinc-900/50 text-gray-700 dark:text-zinc-100 border border-gray-200 dark:border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-600"
+                            className="w-full py-2.5 px-4 bg-zinc-900/50 text-zinc-100 border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 transition-all placeholder:text-zinc-600"
                             id="name"
                             type="text"
                             placeholder={t("Your name")}
@@ -121,11 +121,11 @@ export const ContactInfo: React.FC = () => {
                         />
                     </div>
                     <div>
-                        <label className="block text-[13px] font-bold text-green-600 dark:text-green-400 uppercase tracking-wider mb-2" htmlFor="email">
+                        <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="email">
                             {t("Email Address")}
                         </label>
                         <input
-                            className="w-full py-2.5 px-4 bg-gray-50 dark:bg-zinc-900/50 text-gray-700 dark:text-zinc-100 border border-gray-200 dark:border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 transition-all placeholder:text-gray-400 dark:placeholder:text-zinc-600"
+                            className="w-full py-2.5 px-4 bg-zinc-900/50 text-zinc-100 border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 transition-all placeholder:text-zinc-600"
                             id="email"
                             type="email"
                             placeholder={t("Your email address")}
@@ -135,11 +135,11 @@ export const ContactInfo: React.FC = () => {
                         />
                     </div>
                     <div>
-                        <label className="block text-[13px] font-bold text-green-600 dark:text-green-400 uppercase tracking-wider mb-2" htmlFor="message">
+                        <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="message">
                             {t("Message")}
                         </label>
                         <textarea
-                            className="w-full py-2.5 px-4 bg-gray-50 dark:bg-zinc-900/50 text-gray-700 dark:text-zinc-100 border border-gray-200 dark:border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 transition-all min-h-[120px] resize-none placeholder:text-gray-400 dark:placeholder:text-zinc-600"
+                            className="w-full py-2.5 px-4 bg-zinc-900/50 text-zinc-100 border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 transition-all min-h-[120px] resize-none placeholder:text-zinc-600"
                             id="message"
                             placeholder={t("Tell me about your project...")}
                             value={message}
@@ -151,7 +151,7 @@ export const ContactInfo: React.FC = () => {
                         type="button"
                         onClick={handleSubmit}
                         disabled={isSubmitting}
-                        className="w-full py-2.5 px-6 bg-green-500/10 hover:bg-green-500/20 text-green-500 dark:text-green-400 font-bold rounded-lg border border-green-500/20 hover:border-green-500/40 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed group"
+                        className="w-full py-2.5 px-6 bg-green-500/10 hover:bg-green-500/20 text-green-400 font-bold rounded-lg border border-green-500/20 hover:border-green-500/40 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed group"
                     >
                         {isSubmitting ? (
                             <div className="w-5 h-5 border-2 border-green-500/30 border-t-green-500 rounded-full animate-spin" />
