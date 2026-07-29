@@ -12,7 +12,7 @@ import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 
 function App() {
   return (
-    <div className="dark bg-zinc-900 min-h-screen transition-colors duration-300">
+    <div className="dark bg-zinc-900 min-h-screen">
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>

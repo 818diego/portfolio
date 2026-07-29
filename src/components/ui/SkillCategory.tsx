@@ -3,8 +3,7 @@ import { SkillItem } from '@/components/ui/SkillItem';
 
 const SkillCategory: React.FC<{ title: string; data: any[]; index: number }> = ({ title, data, index }) => (
     <div
-        className="bg-zinc-800 rounded-xl p-4 md:p-5 shadow-sm border border-zinc-700/50 scroll-fade-in"
-        style={{ animationDelay: `${index * 0.3}s` }}
+        className="bg-zinc-800 rounded-xl p-4 md:p-5 shadow-sm border border-zinc-700/50"
     >
         <h3 className="text-xl font-bold mb-4 text-white">
             {title}

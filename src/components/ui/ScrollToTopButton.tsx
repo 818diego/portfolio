@@ -30,7 +30,7 @@ const ScrollToTopButton: React.FC = () => {
         <div className="fixed bottom-12 mr-10 right-4 z-60">
             <button
                 onClick={scrollToTop}
-                className={`bg-green-500 text-white p-4 rounded-full hover:bg-green-600 hover:scale-110 duration-500 transform transition-transform ease-in-out shadow-lg ${isVisible ? 'fade-in' : 'fade-out'}`}
+                className={`bg-green-500 text-white p-4 rounded-full hover:bg-green-600 shadow-lg ${isVisible ? '' : 'hidden'}`}
             >
                 <FaArrowUp />
             </button>

@@ -28,10 +28,10 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ease-out ${isScrolled ? 'header-scroll' : 'bg-transparent'
+    <nav className={`fixed w-full z-50 ${isScrolled ? 'header-scroll' : 'bg-transparent'
       }`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-green-400 transition-all duration-300">
+        <h1 className="text-2xl font-bold text-green-400">
           <img
             src="supreSVG.svg"
             alt="Logo"
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
         <div className="flex items-center space-x-4">
           <button
             onClick={() => changeLanguage(i18n.language === 'en' ? 'es' : 'en')}
-            className="p-2 rounded-full hover:bg-green-900/30 transition-all duration-300 flex items-center focus-visible:ring-emerald-500"
+            className="p-2 rounded-full hover:bg-green-900/30 flex items-center focus-visible:ring-emerald-500"
             aria-label={i18n.language === 'en' ? t('Change to Spanish') : t('Change to English')}
           >
             <IoLanguageOutline className="text-green-400 w-6 h-6" />

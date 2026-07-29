@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { FaGithub, FaLinkedinIn, FaCode, FaFileAlt } from 'react-icons/fa';
 import { BsTerminalFill } from 'react-icons/bs';
 import { GrCloudSoftware } from 'react-icons/gr';
@@ -8,49 +8,26 @@ import { useTranslation } from 'react-i18next';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('appear');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
 
   const info = personalInfo();
 
   return (
     <section
-      ref={sectionRef}
-      className="min-h-screen flex items-center justify-center scroll-section-appear"
+      className="min-h-screen flex items-center justify-center"
     >
       <div className="container mx-auto px-6 py-24 text-center relative">
-        <div className="inline-flex items-center gap-2 bg-green-900/30 px-4 py-2 rounded-full mb-6 scroll-fade-in">
+        <div className="inline-flex items-center gap-2 bg-green-900/30 px-4 py-2 rounded-full mb-6">
           <BsTerminalFill className="w-4 h-4 text-green-400" />
           <span className="text-green-400 font-medium">
             {info.available}
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-green-400 scroll-fade-in">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-green-400">
           {t("Hello, I'm")} <span className="text-green-300">{info.fullName}</span>
         </h1>
 
-        <div className="flex items-center justify-center gap-3 mb-2 scroll-fade-in">
+        <div className="flex items-center justify-center gap-3 mb-2">
           <FaCode className="w-6 h-6 text-green-400" />
           <p className="text-xl text-gray-400">
             {info.role}
@@ -58,7 +35,7 @@ export const Hero: React.FC = () => {
           <GrCloudSoftware className="w-6 h-6 text-green-400" />
         </div>
 
-        <p className="max-w-2xl mx-auto text-gray-400 mb-8 scroll-fade-in">
+        <p className="max-w-2xl mx-auto text-gray-400 mb-8">
           {info.description}
         </p>
 
@@ -90,11 +67,10 @@ export const Hero: React.FC = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800 hover:shadow-lg transition-all button-hover ${social.color} scroll-fade-in`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`group flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800 hover:shadow-lg ${social.color}`}
               aria-label={t(social.label)}
             >
-              <Icon className="w-5 h-5 text-gray-400 transition-colors group-hover:text-green-400" />
+              <Icon className="w-5 h-5 text-gray-400 group-hover:text-green-400" />
               <span className="text-sm font-medium text-gray-300 group-hover:text-green-400">
                 {social.label}
               </span>
@@ -105,7 +81,7 @@ export const Hero: React.FC = () => {
       </div>
         <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20">
           <div className="flex flex-col items-center text-green-400 p-4">
-            <PiMouseScroll className="w-8 h-8 animate-bounce text-current" />
+            <PiMouseScroll className="w-8 h-8 text-current" />
           </div>
         </div>
     </section>
