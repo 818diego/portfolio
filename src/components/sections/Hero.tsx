@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { FaGithub, FaLinkedinIn, FaCode, FaFileAlt, FaMousePointer, FaChevronDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaCode, FaFileAlt } from 'react-icons/fa';
 import { BsTerminalFill } from 'react-icons/bs';
 import { GrCloudSoftware } from 'react-icons/gr';
+import { PiMouseScroll } from 'react-icons/pi';
 import { personalInfo } from '@/data';
 import { useTranslation } from 'react-i18next';
 
@@ -104,8 +105,7 @@ export const Hero: React.FC = () => {
       </div>
         <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20">
           <div className="flex flex-col items-center text-green-400 p-4">
-            <FaMousePointer className="w-8 h-8 animate-bounce text-current mb-1" />
-            <FaChevronDown className="w-4 h-4 text-current" />
+            <PiMouseScroll className="w-8 h-8 animate-bounce text-current" />
           </div>
         </div>
     </section>

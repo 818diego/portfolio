@@ -31,7 +31,7 @@ export const ExperienceItem: React.FC<{ exp: any, index: number }> = ({ exp, ind
                             </span>
                             <div className="flex items-center gap-1 px-2 py-0.5 rounded-md bg-zinc-700/50 border border-green-500/30 transition-all duration-300">
                                 <FaBriefcase className="w-3 h-3 text-green-500" />
-+                                <span className="font-bold text-[10px] uppercase tracking-wider text-white">{exp.company}</span>
+                                <span className="font-bold text-[10px] uppercase tracking-wider text-white">{exp.company}</span>
                             </div>
                         </div>
                         <h3 className="text-xl font-black text-green-400 transition-colors">
