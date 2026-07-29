@@ -52,6 +52,7 @@
 
 nav {
   border-bottom: 1px solid transparent;
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 nav.header-scroll {
