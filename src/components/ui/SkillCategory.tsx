@@ -1,5 +1,5 @@
 import React from 'react';
-import { SkillItem } from './SkillItem';
+import { SkillItem } from '@/components/ui/SkillItem';
 
 const SkillCategory: React.FC<{ title: string; data: any[]; index: number }> = ({ title, data, index }) => (
     <div

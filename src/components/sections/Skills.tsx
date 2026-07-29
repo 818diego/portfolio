@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { skills } from '../../data';
+import { skills } from '@/data';
 import { FaTools } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import { SkillCategory } from '../ui/SkillCategory';
+import { SkillCategory } from '@/components/ui/SkillCategory';
 
 export const Skills: React.FC = () => {
   const { t } = useTranslation();

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { experiences } from '@/data';
 import { FaAward } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import { ExperienceItem } from '../sections/ExperienceItem';
+import { ExperienceItem } from '@/components/sections/ExperienceItem';
 
 export const Experience: React.FC = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { GrContact } from 'react-icons/gr';
 import { useTranslation } from 'react-i18next';
-import { ContactInfo } from '../ui/ContactInfo';
+import { ContactInfo } from '@/components/ui/ContactInfo';
 
 export const ContactSection: React.FC = () => {
     const { t } = useTranslation();

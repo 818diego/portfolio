@@ -1,5 +1,5 @@
 import React from 'react';
-import { Skill } from '../../data/skills';
+import { Skill } from '@/data/skills';
 
 const SkillItem: React.FC<{ skill: Skill; index: number; skillIndex: number }> = ({ skill, index, skillIndex }) => (
     <div
