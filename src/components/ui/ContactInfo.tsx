@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { gsap } from 'gsap';
 import { FaClock, FaLanguage, FaGlobe } from 'react-icons/fa';
+import { useGsapScope, staggerReveal, prefersReducedMotion } from '@/utils/gsap';
 
 export const ContactInfo: React.FC = () => {
     const { t } = useTranslation();
@@ -10,10 +12,24 @@ export const ContactInfo: React.FC = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const rootRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
     }, []);
+
+    useGsapScope(() => {
+        if (!rootRef.current) return;
+        const left = rootRef.current.querySelectorAll('[data-ci-left]');
+        const right = rootRef.current.querySelectorAll('[data-ci-right]');
+
+        if (prefersReducedMotion()) {
+            gsap.fromTo([left, right], { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.04 });
+        } else {
+            staggerReveal(left as unknown as gsap.DOMTarget, { x: -20, stagger: 0.08, duration: 0.6 });
+            staggerReveal(right as unknown as gsap.DOMTarget, { x: 20, stagger: 0.08, duration: 0.6, delay: 0.1 });
+        }
+    }, rootRef);
 
     const sanitizeMessage = (text: string): string => {
         return text.trim();
@@ -57,8 +73,8 @@ export const ContactInfo: React.FC = () => {
     };
 
     return (
-        <div className="max-w-full mx-auto bg-zinc-800 rounded-xl shadow-sm border border-zinc-700/50 overflow-hidden flex flex-col md:flex-row">
-            <div className="flex flex-col justify-center p-8 w-full md:w-1/2 bg-zinc-900/20">
+        <div ref={rootRef} className="max-w-full mx-auto bg-zinc-800 rounded-xl shadow-sm border border-zinc-700/50 overflow-hidden flex flex-col md:flex-row">
+            <div data-ci-left className="flex flex-col justify-center p-8 w-full md:w-1/2 bg-zinc-900/20">
                 <h3 className="text-2xl font-black text-white leading-tight">
                     {t("I'd love to hear from you!")}
                 </h3>
@@ -66,13 +82,13 @@ export const ContactInfo: React.FC = () => {
                     {t("If you have any questions or want to discuss a project, feel free to contact me.")}
                 </p>
                 <div className="mt-8 space-y-4">
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-green-500/5 border border-green-500/20">
+                    <div data-ci-left className="flex items-center gap-3 p-3 rounded-lg bg-green-500/5 border border-green-500/20">
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
                         <span className="text-sm font-medium text-green-400 font-bold uppercase tracking-wide">
                             {t("Available for new projects")}
                         </span>
                     </div>
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-blue-500/5 border border-blue-500/10">
+                    <div data-ci-left className="flex items-center justify-between p-4 rounded-xl bg-blue-500/5 border border-blue-500/10">
                         <div className="flex items-center gap-4">
                             <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
                                 <FaClock className="w-5 h-5 text-blue-400" />
@@ -81,7 +97,7 @@ export const ContactInfo: React.FC = () => {
                         </div>
                         <span className="text-sm text-zinc-300 font-bold">24/72 hrs</span>
                     </div>
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-orange-500/5 border border-orange-500/10">
+                    <div data-ci-left className="flex items-center justify-between p-4 rounded-xl bg-orange-500/5 border border-orange-500/10">
                         <div className="flex items-center gap-4">
                             <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center">
                                 <FaLanguage className="w-5 h-5 text-orange-400" />
@@ -90,7 +106,7 @@ export const ContactInfo: React.FC = () => {
                         </div>
                         <span className="text-sm text-zinc-300 font-bold">{t("Spanish & English")}</span>
                     </div>
-                    <div className="flex items-center justify-between p-4 rounded-xl bg-zinc-500/5 border border-zinc-500/10">
+                    <div data-ci-left className="flex items-center justify-between p-4 rounded-xl bg-zinc-500/5 border border-zinc-500/10">
                         <div className="flex items-center gap-4">
                             <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-zinc-500/20 flex items-center justify-center">
                                 <FaGlobe className="w-5 h-5 text-zinc-400" />
@@ -101,12 +117,12 @@ export const ContactInfo: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="p-8 w-full md:w-1/2 relative">
+            <div data-ci-right className="p-8 w-full md:w-1/2 relative">
                 <h3 className="text-xl font-bold text-white mb-6">
                     {t("Send me a message")}
                 </h3>
                 <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
-                    <div>
+                    <div data-ci-right>
                         <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="name">
                             {t("Name")}
                         </label>
@@ -120,7 +136,7 @@ export const ContactInfo: React.FC = () => {
                             disabled={isSubmitting}
                         />
                     </div>
-                    <div>
+                    <div data-ci-right>
                         <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="email">
                             {t("Email Address")}
                         </label>
@@ -134,7 +150,7 @@ export const ContactInfo: React.FC = () => {
                             disabled={isSubmitting}
                         />
                     </div>
-                    <div>
+                    <div data-ci-right>
                         <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="message">
                             {t("Message")}
                         </label>
@@ -148,6 +164,7 @@ export const ContactInfo: React.FC = () => {
                         />
                     </div>
                     <button
+                        data-ci-right
                         type="button"
                         onClick={handleSubmit}
                         disabled={isSubmitting}

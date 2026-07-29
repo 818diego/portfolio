@@ -1,8 +1,9 @@
 import React from 'react';
 import { Skill } from '@/data/skills';
 
-const SkillItem: React.FC<{ skill: Skill; index: number; skillIndex: number }> = ({ skill, index: _index, skillIndex: _skillIndex }) => (
+const SkillItem: React.FC<{ skill: Skill }> = ({ skill }) => (
     <div
+        data-skill-item
         className="bg-white/5 border border-white/10 rounded-lg p-2.5 hover:border-green-500/30 flex items-center group"
     >
         <div className="flex items-center gap-2.5">
