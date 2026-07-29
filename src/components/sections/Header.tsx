@@ -62,7 +62,7 @@ export const Header: React.FC = () => {
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center relative">
         <h1 className="text-2xl font-bold text-green-400">
-          <a href="#home" aria-label="Home">
+          <a href="#home" aria-label={t('Home')}>
             <img
               src="supreSVG.svg"
               alt="Logo"
