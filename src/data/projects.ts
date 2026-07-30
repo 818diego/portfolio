@@ -19,7 +19,6 @@ export const projects = () => {
         { name: "TypeScript", icon: SiTypescript },
       ],
       features: [t("Sales Management"), t("Admin Dashboard"), t("RESTful APIs")],
-      methodology: t("Scrum"),
       teamSize: t("3 developers"),
       duration: t("4 months"),
       impact: t("Sales process optimization"),
@@ -84,10 +83,6 @@ export const projects = () => {
         "I developed a comprehensive website for Dalton Life, a brand dedicated to selling GTA V roleplay scripts for the FiveM game engine. The website showcases their products and services, including their own roleplay server, providing an engaging platform for the gaming community."
       ),
       image: "https://i.imgur.com/kFIBKiU.png",
-      images: [
-        "https://i.imgur.com/kFIBKiU.png",
-        "https://i.imgur.com/bTx3o69.png",
-      ],
       demo: "https://www.daltonxlife.org/",
       tech: [
         { name: "React", icon: FaReact },

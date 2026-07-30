@@ -105,31 +105,3 @@ export function slideInX(target: gsap.DOMTarget, direction: 'left' | 'right', op
   });
 }
 
-export type ScaleInOptions = {
-  scale?: number;
-  duration?: number;
-  delay?: number;
-  stagger?: number;
-  start?: string;
-};
-
-export function scaleIn(target: gsap.DOMTarget, opts: ScaleInOptions = {}): gsap.core.Tween {
-  ensureRegistered();
-  const { scale = 0.92, duration, delay = 0, stagger = 0, start = 'top 85%' } = opts;
-  if (prefersReducedMotion()) {
-    return gsap.fromTo(target, { opacity: 0 }, { opacity: 1, duration: 0.01, delay, stagger });
-  }
-  return gsap.from(target, {
-    scale,
-    opacity: 0,
-    duration: duration ?? 0.7,
-    delay,
-    stagger,
-    scrollTrigger: { trigger: target, start, toggleActions: 'play none none none' }
-  });
-}
-
-export function instantShow(target: gsap.DOMTarget): void {
-  ensureRegistered();
-  gsap.set(target, { opacity: 1, x: 0, y: 0, scale: 1 });
-}

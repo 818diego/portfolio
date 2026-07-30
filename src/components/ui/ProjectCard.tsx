@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { FaCode } from 'react-icons/fa';
 import { gsap } from 'gsap';
 import { Badge } from '@/components/ui/Badge';
 import { useTranslation } from 'react-i18next';
@@ -9,12 +8,9 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  images?: string[];
-  github?: string;
   demo?: string;
   tech: { name: string; icon: React.ComponentType }[];
   features: string[];
-  methodology?: string;
   teamSize: string;
   duration: string;
   impact: string;
@@ -62,7 +58,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <h3 data-pc className="text-lg font-bold mb-2 text-white group-hover:text-green-400">
           {project.title}
         </h3>
-        <p data-pc className="description-text text-gray-400 mb-5 text-[13px] leading-relaxed">
+        <p data-pc className="text-gray-400 mb-5 text-[13px] leading-relaxed">
           {project.description}
         </p>
         <div data-pc className="flex flex-wrap gap-2 mb-6">
@@ -87,22 +83,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
         <div data-pc className="mt-auto pt-5 border-t border-zinc-700/50 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            {project.github ? (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/btn relative flex items-center justify-center w-9 h-9 rounded-lg border border-zinc-700 text-gray-400 hover:border-green-500/50 hover:text-green-500"
-                title={t('Code')}
-              >
-                <FaCode className="w-4 h-4" />
-              </a>
-            ) : (
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-800/50 border border-zinc-700/30 text-[10px] text-zinc-500 font-medium">
-                <span className="w-1 h-1 bg-zinc-600 rounded-full" />
-                {t('No code')}
-              </div>
-            )}
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-800/50 border border-zinc-700/30 text-[10px] text-zinc-500 font-medium">
+              <span className="w-1 h-1 bg-zinc-600 rounded-full" />
+              {t('No code')}
+            </div>
             {!project.demo && (
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-800/50 border border-zinc-700/30 text-[10px] text-zinc-500 font-medium">
                 <span className="w-1 h-1 bg-zinc-600 rounded-full" />

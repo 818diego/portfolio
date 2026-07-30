@@ -2,7 +2,7 @@ import React from 'react';
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: 'default' | 'outline';
+  variant?: 'default';
   icon?: React.ReactNode;
 }
 
@@ -10,7 +10,6 @@ export const Badge: React.FC<BadgeProps> = ({ children, variant = 'default', ico
   const baseStyles = "px-2 py-1 rounded-full text-sm font-medium flex items-center gap-1";
   const variants = {
     default: "bg-green-900/30 text-green-300",
-    outline: "border border-green-400 text-green-400"
   };
 
   return (
