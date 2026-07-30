@@ -100,7 +100,8 @@ export const Hero: React.FC = () => {
               Icon: FaFileAlt,
               href: info.social.cv,
               label: "CV",
-              color: "hover:text-blue-400"
+              color: "hover:text-blue-400",
+              download: true
             }
           ].map((social) => {
             const Icon = social.Icon;
@@ -111,6 +112,7 @@ export const Hero: React.FC = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
+              {...(social.download ? { download: social.href } : {})}
               className={`group flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800 hover:shadow-lg ${social.color}`}
               aria-label={t(social.label)}
             >

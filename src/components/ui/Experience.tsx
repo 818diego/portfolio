@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { experiences } from '@/data';
 import { FaAward } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import { ExperienceItem } from '@/components/sections/ExperienceItem';
+import { ExperienceItem } from '@/components/ui/ExperienceItem';
 import { useGsapScope, fadeUp, prefersReducedMotion } from '@/utils/gsap';
 import { gsap } from 'gsap';
 
