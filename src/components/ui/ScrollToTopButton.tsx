@@ -53,7 +53,7 @@ const ScrollToTopButton: React.FC = () => {
             <button
                 ref={buttonRef}
                 onClick={scrollToTop}
-                className="bg-green-500 text-white p-4 rounded-full hover:bg-green-600 shadow-lg"
+                className="bg-green-500 text-white p-4 rounded-full hover:bg-green-600 shadow-lg cursor-pointer"
                 aria-label={t('Scroll to top')}
             >
                 <FaArrowUp />

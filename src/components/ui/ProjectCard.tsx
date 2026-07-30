@@ -68,19 +68,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </Badge>
           ))}
         </div>
-        <div data-pc className="grid grid-cols-2 gap-2 mb-6">
-          {project.features.map((feature, i) => (
-            <div
-              key={i}
-              className="flex items-center px-3 py-2 rounded-lg bg-green-400/5 text-zinc-300 border border-green-400/10"
-            >
-              <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 shrink-0" />
-              <span className="text-[10px] leading-tight font-medium line-clamp-1">
-                {feature}
-              </span>
-            </div>
-          ))}
-        </div>
         <div data-pc className="mt-auto pt-5 border-t border-zinc-700/50 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-800/50 border border-zinc-700/30 text-[10px] text-zinc-500 font-medium">
