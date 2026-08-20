@@ -24,12 +24,12 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p data-footer className="text-gray-400 mb-4 md:mb-0">
-            © {new Date().getFullYear()} <a href={info.social.github} target="_blank" rel="noopener noreferrer" className="text-green-500 font-bold hover:text-green-400">818diego</a>. {t('All rights reserved')}.
+            © {new Date().getFullYear()} <a href={info.social.github} target="_blank" rel="noopener noreferrer" className="text-green-500 font-bold hover:text-green-400">818diego</a>. {t('footer.rights')}.
           </p>
           <div data-footer className="flex space-x-4">
             {[
-              { Icon: FaGithub, href: info.social.github, label: t("GitHub Profile") },
-              { Icon: FaLinkedinIn, href: info.social.linkedin, label: t("LinkedIn Profile") },
+              { Icon: FaGithub, href: info.social.github, label: t("footer.githubProfile") },
+              { Icon: FaLinkedinIn, href: info.social.linkedin, label: t("footer.linkedinProfile") },
             ].map((social) => {
               const Icon = social.Icon;
               return (

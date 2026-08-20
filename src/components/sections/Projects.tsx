@@ -26,7 +26,7 @@ export const Projects: React.FC = () => {
       <div className="container mx-auto px-6">
         <h2 data-projects-title className="text-3xl font-bold mb-12 text-center text-green-400 flex items-center justify-center gap-2">
           <FaProjectDiagram className="w-8 h-8 text-green-400" />
-          {t('Projects')}
+          {t('nav.projects')}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">

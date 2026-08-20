@@ -41,7 +41,7 @@ export const Experience: React.FC = () => {
       <div className="container mx-auto px-6">
         <h2 data-experience-title className="text-3xl font-bold mb-12 text-center text-green-400 flex items-center justify-center gap-2">
           <FaAward className="w-8 h-8 text-green-400 mt-1" />
-          {t('Experience')}
+          {t('nav.experience')}
         </h2>
         <div className="max-w-5xl mx-auto relative">
           <div

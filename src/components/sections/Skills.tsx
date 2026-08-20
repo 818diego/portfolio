@@ -22,10 +22,10 @@ export const Skills: React.FC = () => {
   }, sectionRef);
 
   const categories = [
-    { title: t('Languages'), data: skills().languages },
-    { title: t('Frontend'), data: skills().frontend },
-    { title: t('Backend'), data: skills().backend },
-    { title: t('Tools'), data: skills().tools }
+    { title: t('skills.categories.languages'), data: skills().languages },
+    { title: t('skills.categories.frontend'), data: skills().frontend },
+    { title: t('skills.categories.backend'), data: skills().backend },
+    { title: t('skills.categories.tools'), data: skills().tools }
   ];
 
   return (
@@ -33,7 +33,7 @@ export const Skills: React.FC = () => {
       <div className="container mx-auto px-6">
         <h2 data-skills-title className="text-3xl font-bold mb-10 text-center text-green-400">
           <FaTools className="inline-block w-7 h-7 mr-2 text-green-400 mb-1" />
-          {t('Skills')}
+          {t('nav.skills')}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

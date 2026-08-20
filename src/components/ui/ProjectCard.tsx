@@ -72,12 +72,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-800/50 border border-zinc-700/30 text-[10px] text-zinc-500 font-medium">
               <span className="w-1 h-1 bg-zinc-600 rounded-full" />
-              {t('No code')}
+              {t('common.noCode')}
             </div>
             {!project.demo && (
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-800/50 border border-zinc-700/30 text-[10px] text-zinc-500 font-medium">
                 <span className="w-1 h-1 bg-zinc-600 rounded-full" />
-                {t('No demo')}
+                {t('common.noDemo')}
               </div>
             )}
           </div>
@@ -88,7 +88,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               rel="noopener noreferrer"
               className="text-[11px] font-bold text-green-400 uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
             >
-              {t('Live Preview')} →
+              {t('common.livePreview')} →
             </a>
           )}
         </div>

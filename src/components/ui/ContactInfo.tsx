@@ -37,13 +37,13 @@ export const ContactInfo: React.FC = () => {
 
     const handleSubmit = async () => {
         if (!name || !email || !message) {
-            toast.error(t("Please fill in all fields"));
+            toast.error(t("contact.errors.fillAllFields"));
             return;
         }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            toast.error(t("Please enter a valid email"));
+            toast.error(t("contact.errors.invalidEmail"));
             return;
         }
 
@@ -63,10 +63,10 @@ export const ContactInfo: React.FC = () => {
             setName('');
             setEmail('');
             setMessage('');
-            toast.success(t("Message sent successfully!"));
+            toast.success(t("contact.success"));
         } catch (error) {
             console.error("Error sending message", error);
-            toast.error(t("Failed to send message. Please try again later."));
+            toast.error(t("contact.failure"));
         } finally {
             setIsSubmitting(false);
         }
@@ -76,16 +76,16 @@ export const ContactInfo: React.FC = () => {
         <div ref={rootRef} className="max-w-full mx-auto bg-zinc-800 rounded-xl shadow-sm border border-zinc-700/50 overflow-hidden flex flex-col md:flex-row">
             <div data-ci-left className="flex flex-col justify-center p-8 w-full md:w-1/2 bg-zinc-900/20">
                 <h3 className="text-2xl font-black text-white leading-tight">
-                    {t("I'd love to hear from you!")}
+                    {t("contact.title")}
                 </h3>
                 <p className="mt-4 text-gray-400 text-[15px] leading-relaxed">
-                    {t("If you have any questions or want to discuss a project, feel free to contact me.")}
+                    {t("contact.subtitle")}
                 </p>
                 <div className="mt-8 space-y-4">
                     <div data-ci-left className="flex items-center gap-3 p-3 rounded-lg bg-green-500/5 border border-green-500/20">
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
                         <span className="text-sm font-medium text-green-400 font-bold uppercase tracking-wide">
-                            {t("Available for new projects")}
+                            {t("contact.available")}
                         </span>
                     </div>
                     <div data-ci-left className="flex items-center justify-between p-4 rounded-xl bg-blue-500/5 border border-blue-500/10">
@@ -93,7 +93,7 @@ export const ContactInfo: React.FC = () => {
                             <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
                                 <FaClock className="w-5 h-5 text-blue-400" />
                             </div>
-                            <span className="text-[12px] font-bold text-blue-400/70 uppercase tracking-widest">{t("Response Time")}</span>
+                            <span className="text-[12px] font-bold text-blue-400/70 uppercase tracking-widest">{t("contact.responseTime")}</span>
                         </div>
                         <span className="text-sm text-zinc-300 font-bold">24/72 hrs</span>
                     </div>
@@ -102,16 +102,16 @@ export const ContactInfo: React.FC = () => {
                             <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center">
                                 <FaLanguage className="w-5 h-5 text-orange-400" />
                             </div>
-                            <span className="text-[12px] font-bold text-orange-400/70 uppercase tracking-widest">{t("Languages")}</span>
+                            <span className="text-[12px] font-bold text-orange-400/70 uppercase tracking-widest">{t("contact.spokenLanguages")}</span>
                         </div>
-                        <span className="text-sm text-zinc-300 font-bold">{t("Spanish & English")}</span>
+                        <span className="text-sm text-zinc-300 font-bold">{t("contact.spokenLanguagesValue")}</span>
                     </div>
                     <div data-ci-left className="flex items-center justify-between p-4 rounded-xl bg-zinc-500/5 border border-zinc-500/10">
                         <div className="flex items-center gap-4">
                             <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-zinc-500/20 flex items-center justify-center">
                                 <FaGlobe className="w-5 h-5 text-zinc-400" />
                             </div>
-                            <span className="text-[12px] font-bold text-zinc-400/70 uppercase tracking-widest">{t("Timezone")}</span>
+                            <span className="text-[12px] font-bold text-zinc-400/70 uppercase tracking-widest">{t("contact.timezone")}</span>
                         </div>
                         <span className="text-sm text-zinc-300 font-bold">UTC -6</span>
                     </div>
@@ -119,18 +119,18 @@ export const ContactInfo: React.FC = () => {
             </div>
             <div data-ci-right className="p-8 w-full md:w-1/2 relative">
                 <h3 className="text-xl font-bold text-white mb-6">
-                    {t("Send me a message")}
+                    {t("contact.sendMessage")}
                 </h3>
                 <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
                     <div data-ci-right>
                         <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="name">
-                            {t("Name")}
+                            {t("contact.name")}
                         </label>
                         <input
                             className="w-full py-2.5 px-4 bg-zinc-900/50 text-zinc-100 border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 placeholder:text-zinc-600"
                             id="name"
                             type="text"
-                            placeholder={t("Your name")}
+                            placeholder={t("contact.namePlaceholder")}
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             disabled={isSubmitting}
@@ -138,13 +138,13 @@ export const ContactInfo: React.FC = () => {
                     </div>
                     <div data-ci-right>
                         <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="email">
-                            {t("Email Address")}
+                            {t("contact.email")}
                         </label>
                         <input
                             className="w-full py-2.5 px-4 bg-zinc-900/50 text-zinc-100 border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 placeholder:text-zinc-600"
                             id="email"
                             type="email"
-                            placeholder={t("Your email address")}
+                            placeholder={t("contact.emailPlaceholder")}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             disabled={isSubmitting}
@@ -152,12 +152,12 @@ export const ContactInfo: React.FC = () => {
                     </div>
                     <div data-ci-right>
                         <label className="block text-[13px] font-bold text-green-400 uppercase tracking-wider mb-2" htmlFor="message">
-                            {t("Message")}
+                            {t("contact.message")}
                         </label>
                         <textarea
                             className="w-full py-2.5 px-4 bg-zinc-900/50 text-zinc-100 border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 min-h-[120px] resize-none placeholder:text-zinc-600"
                             id="message"
-                            placeholder={t("Tell me about your project...")}
+                            placeholder={t("contact.messagePlaceholder")}
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             disabled={isSubmitting}
@@ -174,7 +174,7 @@ export const ContactInfo: React.FC = () => {
                             <div className="w-5 h-5 border-2 border-green-500/30 border-t-green-500 rounded-full" />
                         ) : (
                             <>
-                                <span className="text-[14px] uppercase tracking-widest">{t("Send Message")}</span>
+                                <span className="text-[14px] uppercase tracking-widest">{t("contact.submit")}</span>
                                 <span>→</span>
                             </>
                         )}

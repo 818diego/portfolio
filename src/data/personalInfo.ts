@@ -5,9 +5,9 @@ export const personalInfo = () => {
 
   return {
     fullName: "Diego Merino",
-    role: t("Software Engineer & Web Developer"),
-    description: t("Software engineer with experience in modern technologies and agile methodologies. Specialised in the creation of systems, sites, and web applications."),
-    available: t("Available for projects"),
+    role: t("personal.role"),
+    description: t("personal.description"),
+    available: t("personal.available"),
     social: {
       github: "https://github.com/818diego",
       linkedin: "https://www.linkedin.com/in/818diego/",

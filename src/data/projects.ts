@@ -9,8 +9,8 @@ export const projects = () => {
 
   return [
     {
-      title: t("Managenments Sales System"),
-      description: t("I led frontend development with NextJS and TailwindCSS, implementing responsive design principles while following Agile Scrum methodology. I developed and integrated RESTful APIs for seamless data flow."),
+      title: t("projects.managementSales.title"),
+      description: t("projects.managementSales.description"),
       image: "https://i.imgur.com/uZmrZsm.png",
       demo: "https://management-sales.vercel.app/",
       tech: [
@@ -18,15 +18,19 @@ export const projects = () => {
         { name: "Tailwind CSS", icon: RiTailwindCssFill },
         { name: "TypeScript", icon: SiTypescript },
       ],
-      features: [t("Sales Management"), t("Admin Dashboard"), t("RESTful APIs")],
-      teamSize: t("3 developers"),
-      duration: t("4 months"),
-      impact: t("Sales process optimization"),
+      features: [
+        t("projects.managementSales.features.salesManagement"),
+        t("projects.managementSales.features.adminDashboard"),
+        t("projects.managementSales.features.restfulApis"),
+      ],
+      teamSize: t("projects.managementSales.teamSize"),
+      duration: t("projects.managementSales.duration"),
+      impact: t("projects.managementSales.impact"),
       icon: FaGlobe,
     },
     {
-      title: t("Appointment Management Mobile App"),
-      description: t("I crafted intuitive UI/UX designs in Figma and implemented them with React Native. I established robust backend-frontend integration through RESTful APIs, enhancing user experience with custom CSS solutions."),
+      title: t("projects.appointmentApp.title"),
+      description: t("projects.appointmentApp.description"),
       image: "https://imgur.com/Zft00zN.png",
       tech: [
         { name: "React Native", icon: FaReact },
@@ -34,15 +38,19 @@ export const projects = () => {
         { name: "JavaScript", icon: FaJs },
         { name: "Figma", icon: FaFigma },
       ],
-      features: [t("UI/UX Design"), t("RESTful APIs"), t("Mobile First")],
-      teamSize: t("3 developers"),
-      duration: t("2 months"),
-      impact: t("Enhanced user experience"),
+      features: [
+        t("projects.appointmentApp.features.uiUx"),
+        t("projects.appointmentApp.features.restfulApis"),
+        t("projects.appointmentApp.features.mobileFirst"),
+      ],
+      teamSize: t("projects.appointmentApp.teamSize"),
+      duration: t("projects.appointmentApp.duration"),
+      impact: t("projects.appointmentApp.impact"),
       icon: FaMobileAlt,
     },
     {
-      title: t("Hotel Management"),
-      description: t("I optimized the existing codebase through strategic refactoring and modernized the user interface. I developed and maintained robust API endpoints using Laravel, while enhancing functionality with PHP, Bootstrap, and jQuery."),
+      title: t("projects.hotelManagement.title"),
+      description: t("projects.hotelManagement.description"),
       image: "https://imgur.com/ysgGsI6.png",
       demo: "https://palegreen-crow-554205.hostingersite.com/",
       tech: [
@@ -51,17 +59,19 @@ export const projects = () => {
         { name: "Bootstrap", icon: FaBootstrap },
         { name: "jQuery", icon: FaReact },
       ],
-      features: [t("Code Refactoring"), t("System Design"), t("Performance Optimization")],
-      teamSize: t("2 developers"),
-      duration: t("2 months"),
-      impact: t("System efficiency improvement"),
+      features: [
+        t("projects.hotelManagement.features.refactoring"),
+        t("projects.hotelManagement.features.systemDesign"),
+        t("projects.hotelManagement.features.performance"),
+      ],
+      teamSize: t("projects.hotelManagement.teamSize"),
+      duration: t("projects.hotelManagement.duration"),
+      impact: t("projects.hotelManagement.impact"),
       icon: FaServer,
     },
     {
-      title: t("Dog Breed Prediction Web App"),
-      description: t(
-        "I engineered a sophisticated AI application as my final university project, implementing a convolutional neural network capable of identifying over 100 dog breeds. I developed an intuitive web interface allowing users to interact seamlessly with the AI model."
-      ),
+      title: t("projects.dogBreed.title"),
+      description: t("projects.dogBreed.description"),
       image: "https://i.imgur.com/hNL4pj3.png",
       demo: "https://dogs-predictions-git-main-818supremos-projects.vercel.app/",
       tech: [
@@ -71,17 +81,19 @@ export const projects = () => {
         { name: "HTML", icon: FaHtml5 },
         { name: "CSS", icon: FaCss3 },
       ],
-      features: [t("AI Prediction"), t("Convolutional Neural Network"), t("100+ Breeds")],
-      teamSize: t("1 developer"),
-      duration: t("1 month"),
-      impact: t("AI Technology Innovation"),
+      features: [
+        t("projects.dogBreed.features.aiPrediction"),
+        t("projects.dogBreed.features.cnn"),
+        t("projects.dogBreed.features.breeds"),
+      ],
+      teamSize: t("projects.dogBreed.teamSize"),
+      duration: t("projects.dogBreed.duration"),
+      impact: t("projects.dogBreed.impact"),
       icon: FaBrain,
     },
     {
-      title: t("Dalton Life Website"),
-      description: t(
-        "I developed a comprehensive website for Dalton Life, a brand dedicated to selling GTA V roleplay scripts for the FiveM game engine. The website showcases their products and services, including their own roleplay server, providing an engaging platform for the gaming community."
-      ),
+      title: t("projects.daltonLife.title"),
+      description: t("projects.daltonLife.description"),
       image: "https://i.imgur.com/kFIBKiU.png",
       demo: "https://www.daltonxlife.org/",
       tech: [
@@ -90,10 +102,14 @@ export const projects = () => {
         { name: "HTML", icon: FaHtml5 },
         { name: "CSS", icon: FaCss3 },
       ],
-      features: [t("Gaming Community"), t("Script Marketplace"), t("Roleplay Server")],
-      teamSize: t("1 developer"),
-      duration: t("2 months"),
-      impact: t("Gaming community engagement"),
+      features: [
+        t("projects.daltonLife.features.gamingCommunity"),
+        t("projects.daltonLife.features.scriptMarketplace"),
+        t("projects.daltonLife.features.roleplayServer"),
+      ],
+      teamSize: t("projects.daltonLife.teamSize"),
+      duration: t("projects.daltonLife.duration"),
+      impact: t("projects.daltonLife.impact"),
       icon: FaGamepad,
     },
   ];

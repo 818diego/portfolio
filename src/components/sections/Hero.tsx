@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
         </div>
 
         <h1 data-hero className="text-5xl md:text-7xl font-bold mb-6 text-green-400">
-          {t("Hello, I'm")} <span className="text-green-300">{info.fullName}</span>
+          {t("hero.greeting")} <span className="text-green-300">{info.fullName}</span>
         </h1>
 
         <div data-hero className="flex items-center justify-center gap-3 mb-2">
@@ -87,19 +87,19 @@ export const Hero: React.FC = () => {
             {
               Icon: FaGithub,
               href: info.social.github,
-              label: "GitHub",
+              labelKey: 'common.github',
               color: "hover:text-white"
             },
             {
               Icon: FaLinkedinIn,
               href: info.social.linkedin,
-              label: "LinkedIn",
+              labelKey: 'common.linkedin',
               color: "hover:text-[#0077b5]"
             },
             {
               Icon: FaFileAlt,
               href: info.social.cv,
-              label: "CV",
+              labelKey: 'common.cv',
               color: "hover:text-blue-400",
               download: true
             }
@@ -108,17 +108,17 @@ export const Hero: React.FC = () => {
             return (
             <a
               data-hero
-              key={social.label}
+              key={social.labelKey}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
               {...(social.download ? { download: social.href } : {})}
               className={`group flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800 hover:shadow-lg ${social.color}`}
-              aria-label={t(social.label)}
+              aria-label={t(social.labelKey)}
             >
               <Icon className="w-5 h-5 text-gray-400 group-hover:text-green-400" />
               <span className="text-sm font-medium text-gray-300 group-hover:text-green-400">
-                {social.label}
+                {t(social.labelKey)}
               </span>
             </a>
             );

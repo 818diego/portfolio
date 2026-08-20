@@ -3,7 +3,6 @@ import { DiMongodb, DiReact } from "react-icons/di";
 import { FaDocker } from "react-icons/fa";
 import { FaJs } from "react-icons/fa6";
 import { SiAngular, SiAstro, SiExpress, SiFigma, SiLua, SiMysql, SiNestjs, SiPostman, SiTypescript } from "react-icons/si";
-import { useTranslation } from "react-i18next";
 import { IconType } from "react-icons";
 
 export interface Skill {
@@ -11,31 +10,27 @@ export interface Skill {
   icon: IconType;
 }
 
-export const skills = () => {
-  const { t } = useTranslation();
-
-  return {
-    languages: [
-      { name: t("JavaScript"), icon: FaJs },
-      { name: t("TypeScript"), icon: SiTypescript },
-      { name: t("Lua"), icon: SiLua },
-    ],
-    frontend: [
-      { name: t("React"), icon: DiReact },
-      { name: t("Astro"), icon: SiAstro },
-      { name: t("Angular"), icon: SiAngular },
-    ],
-    backend: [
-      { name: t("NestJS"), icon: SiNestjs },
-      { name: t("Express"), icon: SiExpress },
-      { name: t("MongoDB"), icon: DiMongodb },
-      { name: t("MySQL"), icon: SiMysql },
-    ],
-    tools: [
-      { name: t("Git"), icon: BsGithub },
-      { name: t("Docker"), icon: FaDocker },
-      { name: t("Figma"), icon: SiFigma },
-      { name: t("Postman"), icon: SiPostman },
-    ],
-  };
-};
+export const skills = () => ({
+  languages: [
+    { name: "JavaScript", icon: FaJs },
+    { name: "TypeScript", icon: SiTypescript },
+    { name: "Lua", icon: SiLua },
+  ],
+  frontend: [
+    { name: "React", icon: DiReact },
+    { name: "Astro", icon: SiAstro },
+    { name: "Angular", icon: SiAngular },
+  ],
+  backend: [
+    { name: "NestJS", icon: SiNestjs },
+    { name: "Express", icon: SiExpress },
+    { name: "MongoDB", icon: DiMongodb },
+    { name: "MySQL", icon: SiMysql },
+  ],
+  tools: [
+    { name: "Git", icon: BsGithub },
+    { name: "Docker", icon: FaDocker },
+    { name: "Figma", icon: SiFigma },
+    { name: "Postman", icon: SiPostman },
+  ],
+});

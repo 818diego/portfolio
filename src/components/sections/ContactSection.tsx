@@ -26,7 +26,7 @@ export const ContactSection: React.FC = () => {
             <div className="container mx-auto px-6">
                 <h2 data-contact-title className="text-3xl font-bold mb-12 text-center text-green-400 flex items-center justify-center gap-2">
                     <GrContact className="w-8 h-8 text-green-500" />
-                    {t("Contact")}
+                    {t("nav.contact")}
                 </h2>
                 <div data-contact-container>
                     <ContactInfo />

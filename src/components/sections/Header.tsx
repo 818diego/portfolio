@@ -9,11 +9,11 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { key: 'Home', href: '#home', id: 'home' },
-  { key: 'Experience', href: '#experience', id: 'experience' },
-  { key: 'Projects', href: '#projects', id: 'projects' },
-  { key: 'Skills', href: '#skills', id: 'skills' },
-  { key: 'Contact', href: '#contact', id: 'contact' }
+  { key: 'nav.home', href: '#home', id: 'home' },
+  { key: 'nav.experience', href: '#experience', id: 'experience' },
+  { key: 'nav.projects', href: '#projects', id: 'projects' },
+  { key: 'nav.skills', href: '#skills', id: 'skills' },
+  { key: 'nav.contact', href: '#contact', id: 'contact' }
 ];
 
 export const Header: React.FC = () => {
@@ -62,7 +62,7 @@ export const Header: React.FC = () => {
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center relative">
         <h1 className="text-2xl font-bold text-green-400">
-          <a href="#home" aria-label={t('Home')}>
+          <a href="#home" aria-label={t('nav.home')}>
             <img
               src="supreSVG.svg"
               alt="Logo"
@@ -98,7 +98,7 @@ export const Header: React.FC = () => {
         <button
           onClick={() => changeLanguage(i18n.language === 'en' ? 'es' : 'en')}
           className="p-2 rounded-full hover:bg-green-900/30 flex items-center cursor-pointer focus-visible:ring-emerald-500"
-          aria-label={i18n.language === 'en' ? t('Change to Spanish') : t('Change to English')}
+          aria-label={i18n.language === 'en' ? t('nav.changeToSpanish') : t('nav.changeToEnglish')}
         >
           <IoLanguageOutline className="text-green-400 w-6 h-6" />
           <span className="ml-2 text-green-400 text-sm font-medium">
