@@ -1,5 +1,5 @@
 import { FaCode, FaThLarge, FaServer } from "react-icons/fa";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export const experiences = () => {
   const { t } = useTranslation();
@@ -12,9 +12,9 @@ export const experiences = () => {
       description: t("experience.frontendDeveloper.description"),
       achievements: [
         t("experience.frontendDeveloper.achievements.angular"),
-        t("experience.frontendDeveloper.achievements.documentation"),
-        t("experience.frontendDeveloper.achievements.problemSolving"),
         t("experience.frontendDeveloper.achievements.apiIntegration"),
+        t("experience.frontendDeveloper.achievements.design"),
+        t("experience.frontendDeveloper.achievements.documentation"),
       ],
       icon: FaCode,
     },
@@ -25,8 +25,8 @@ export const experiences = () => {
       description: t("experience.internship.description"),
       achievements: [
         t("experience.internship.achievements.nextjs"),
+        t("experience.internship.achievements.apiIntegration"),
         t("experience.internship.achievements.qa"),
-        t("experience.internship.achievements.redesign"),
       ],
       icon: FaThLarge,
     },

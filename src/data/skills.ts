@@ -1,8 +1,19 @@
 import { BsGithub } from "react-icons/bs";
 import { DiMongodb, DiReact } from "react-icons/di";
-import { FaDocker } from "react-icons/fa";
-import { FaJs } from "react-icons/fa6";
-import { SiAngular, SiAstro, SiExpress, SiFigma, SiLua, SiMysql, SiNestjs, SiPostman, SiTypescript } from "react-icons/si";
+import { FaDocker, FaRobot } from "react-icons/fa";
+import { FaJs, FaLaravel } from "react-icons/fa6";
+import { RiNextjsFill } from "react-icons/ri";
+import {
+  SiAngular,
+  SiCursor,
+  SiExpress,
+  SiFigma,
+  SiGooglegemini,
+  SiMysql,
+  SiNestjs,
+  SiPostman,
+  SiTypescript,
+} from "react-icons/si";
 import { IconType } from "react-icons";
 
 export interface Skill {
@@ -14,18 +25,23 @@ export const skills = () => ({
   languages: [
     { name: "JavaScript", icon: FaJs },
     { name: "TypeScript", icon: SiTypescript },
-    { name: "Lua", icon: SiLua },
   ],
   frontend: [
-    { name: "React", icon: DiReact },
-    { name: "Astro", icon: SiAstro },
     { name: "Angular", icon: SiAngular },
+    { name: "React", icon: DiReact },
+    { name: "Next.js", icon: RiNextjsFill },
   ],
   backend: [
     { name: "NestJS", icon: SiNestjs },
+    { name: "Laravel", icon: FaLaravel },
     { name: "Express", icon: SiExpress },
     { name: "MongoDB", icon: DiMongodb },
     { name: "MySQL", icon: SiMysql },
+  ],
+  aiAgents: [
+    { name: "Cursor", icon: SiCursor },
+    { name: "Gemini", icon: SiGooglegemini },
+    { name: "OpenClaw", icon: FaRobot },
   ],
   tools: [
     { name: "Git", icon: BsGithub },
