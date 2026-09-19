@@ -27,6 +27,7 @@ export const translations = {
     },
   },
   experience: {
+    current: { en: "Current", es: "Actual" },
     frontendDeveloper: {
       title: { en: "Frontend Developer", es: "Desarrollador Frontend" },
       period: { en: "July 2025 - Present", es: "Julio 2025 - Presente" },
