@@ -30,30 +30,38 @@ export const Skills: React.FC = () => {
     }
   }, sectionRef);
 
+  const skillData = skills();
+
   const categories = [
-    { title: t("skills.categories.languages"), data: skills().languages },
-    { title: t("skills.categories.frontend"), data: skills().frontend },
-    { title: t("skills.categories.backend"), data: skills().backend },
-    { title: t("skills.categories.aiAgents"), data: skills().aiAgents },
-    { title: t("skills.categories.tools"), data: skills().tools },
+    { title: t("skills.categories.languages"), data: skillData.languages },
+    { title: t("skills.categories.frontend"), data: skillData.frontend },
+    { title: t("skills.categories.backend"), data: skillData.backend },
+    { title: t("skills.categories.aiAgents"), data: skillData.aiAgents },
+    {
+      title: t("skills.categories.tools"),
+      data: skillData.tools,
+      className: "md:col-span-2",
+    },
   ];
 
   return (
     <section id="skills" ref={sectionRef} className="py-20 bg-zinc-900">
       <div className="container mx-auto px-6">
-        <div data-skills-title className="mb-10 text-center">
-          <h2 className="text-3xl font-bold text-green-400">
-            <FaTools className="inline-block w-7 h-7 mr-2 text-green-400 mb-1" />
+        <div data-skills-title className="mb-12 text-center">
+          <h2 className="text-3xl font-bold text-green-400 flex items-center justify-center gap-2">
+            <FaTools className="w-8 h-8 text-green-400" />
             {t("skills.title")}
           </h2>
           <p className="mt-2 text-sm text-gray-400">{t("skills.subtitle")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
           {categories.map((category, index) => (
             <SkillCategory
               key={index}
               title={category.title}
               data={category.data}
+              className={category.className}
             />
           ))}
         </div>
